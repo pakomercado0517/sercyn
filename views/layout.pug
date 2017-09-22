@@ -1,0 +1,118 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(property='og: url', content='http://sercyn.herokuapp.com/comment')
+    title #{ title }
+    meta(name='application-name', content='SerCyn')
+    meta(name='author', content='Sergio Ivan Guerrero Escalante')
+    meta(property='fb:pages' content='1941938882754774')
+    meta(name='description', content='Es un servicio escoturistico y turístico en Tuxpan de rodriguez cano veracruz, que además, tiene el gusto de prestar servicios de pesca deportiva, paseos nauticos en el rio, visitar los manglares, los arrecífes y la Isla de lobos, ademas tenemos la dicha de trabajar con la escuela de natación, para personas que quieran disfrutar unas placenteras vacaciones y buceo tuxpan. Pertenecemos a La Asociacion de Prestadores de servicios turisticos de tuxpan, y por ende, tenemos certificación de seguridad y calidad en nuestros servicios.')
+    meta(name='generator', content='NodeJs')
+    meta(name='keywords', content='Sercyn, ecoturismo, pesca, pesca deportiva, arrecifes, isla de lobos, tuxpan de rodríguez cano, veracruz, paseo, turismo, buceo, snorkel, snorkell, rio, vacaciones, escuela, río tuxpan, asociacion de prestadores de servicios turísticos de Tuxpan, autopista, méxico-tuxpan, ciudad de méxico, bucear, corales, Isla Lobos, Isla de lobos, vida marina, México')
+    meta(name='googlebot', content='nosnippet')
+    meta(name='language', content='es-mx')
+    meta(name='msapplication-TileColor', content='#ffffff')
+    meta(name='msapplication-TileImage', content='/images/favicon/ms-icon-144x144.png')
+    meta(name='theme-color', content='#ffffff')
+    meta(itemprop='name', content= 'Náutica SerCyn- Ecoturismo, Pesca Deportiva y Servicio Turístico')
+    meta(itemprop='description', content= 'Es un servicio escoturistico y turístico en Tuxpan de rodriguez cano veracruz, que además, tiene el gusto de prestar servicios de pesca deportiva, paseos nauticos en el rio, visitar los manglares, los arrecífes y la Isla de lobos, ademas tenemos la dicha de trabajar con la escuela de natación, para personas que quieran disfrutar unas placenteras vacaciones y buceo tuxpan. Pertenecemos a La Asociacion de Prestadores de servicios turisticos de tuxpan, y por ende, tenemos certificación de seguridad y calidad en nuestros servicios.')
+    link(rel='stylesheet', href='./stylesheet/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheet/app-min.css')
+    link(rel='stylesheet', href='/stylesheet/font-awesome.css')
+    link(href='https://fonts.googleapis.com/css?family=Pacifico', rel='stylesheet')
+    link(rel='stylesheet', href='/stylesheet/bootstrap-grid.min.css')
+    link(rel='stylesheet', href='/stylesheet/animate.css')
+    link(rel='stylesheet', href='/stylesheet/bootstrap-reboot.min.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  body
+    #fb-root
+    script.
+     (function(d, s, id) {
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) return;
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.9&appId=1941938882754774";
+     fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+    // logo
+    .container-fluid
+      section#logo.after-title
+        .row.text-center
+          .col.col-xs-12.col-sm-12.col-md-4
+            img.logo-image.img.wow.flipInX(src='/images/logo_sercyn2.png', alt='logo, responsive image')
+          #titulo.col.col-xs-12.col-sm-12.col-md-8.wow.slideInRight
+            p.text-white.n Náutica
+            h1.text-white SerCyn
+            p.text-white Tour Service, Ecoturismo y Pesca Deportiva 
+      // /logo
+      // menu de navegación
+      .row
+        .col-12
+          nav.navbar.navbar-toggleable-md.navbar-inverse.bg-inverse
+            button.navbar-toggler.navbar-toggler-right.wow.zoomInLeft(type='button', data-toggle='collapse', data-target='#navbarNavDropdown', aria-controls='navbarNavDropdown', aria-expanded='false', aria-label='Toggle navigation')
+              span.navbar-toggler-icon
+            a.navbar-brand.wow.zoomInLeft(href='#') SerCyn
+            #navbarNavDropdown.collapse.navbar-collapse
+              ul.navbar-nav
+                li.nav-item.active
+                  a.nav-link.wow.zoomInLeft(href='/')
+                    | Inicio 
+                    //- span.sr-only (current)
+                li.nav-item
+                  a.nav-link.wow.zoomInLeft(href='#') Acerca de Nosotros
+                li.nav-item
+                  a.nav-link.wow.zoomInLeft(href='/comment') Contacto
+                li.nav-item.dropdown
+                  a#navbarDropdownMenuLink.nav-link.dropdown-toggle.wow.zoomInLeft(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                    | Servicios
+                  .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+                    a.dropdown-item(href='/rio') Río Tuxpan
+                    a.dropdown-item(href='/arrecife') Arrecifes
+                    a.dropdown-item(href='/lobos') Isla de Lobos
+                li.nav-item
+                  a.nav-link.wow.zoomInLeft(href='https://www.facebook.com/sercyn13', target='_blank') 
+                    i.fa.fa-facebook-official(style='font-size:28px; color:white') 
+      // /menu de navegación
+      block  content
+      block content2
+      block content3
+      block content4
+      block content_comment
+      block content_reservar
+      block content_shopping
+      block contentPrivacy     
+      footer.footer
+        .row.justify-content-center.align-items-center
+          .col-sm-12.col-md-3.col-lg-4.col-xl-4.align-self-center.foot-text
+            p.wow.zoomIn.text-left Sercyn 
+              br
+              small.wow.zoomIn Ecoturismo, Pesca Deportiva y
+              br
+              | Tour-Service
+          .col-sm-5.col-md-3.col-lg-4.offset-lg-1
+            img.logo-footer.wow.slideInUp(src='/images/logo_sercyn2.png')
+          .col-sm-12.col-md-4.col-lg-3.col-xl-3.foot-text
+            p.text-right 
+              strong Contáctanos 
+                br
+              small Teléfono: 783-104-6697 
+                br
+              small email: sercyn13@b-and-bconsultores.com.mx
+                br
+              small
+                a(href="/privacy") Política de Privacidad
+
+
+    script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js', integrity='sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n', crossorigin='anonymous')
+    script(src='/javascript/utils.js')
+    script(src='/javascript/tether.js')
+    script(src='/javascript/jquery-3.2.1.min.js')
+    script(src='/javascript/bootstrap.min.js')
+    script(src='/javascript/app.js')
+    script(src='/javascript/wow.js')
+    script.
+      new WOW().init()
+

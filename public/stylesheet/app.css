@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter|Bungee+Inline|Yellowtail|Shrikhand|Poppins|Roboto+Condensed');
+
+html, body {
+	background-color: #5E5A5A !important; 
+	box-sizing: border-box !important; 
+}
+.container, .container-fluid  {
+	max-width: 100% !important;
+	overflow: hidden !important;
+}
+#nav-service a {
+	text-decoration: none !important;
+	color:white !important;
+	back
+}
+#titulo {
+	font-family: Yellowtail !important;
+}
+#titulo .n {
+	padding-top: 12px !important;
+}
+.row {
+	margin-top: 35px !important;
+}
+.after-title {
+	margin-top: 0 !important;
+}
+#logo  {
+	background:linear-gradient(#BB8206, #1E1E1E 20%) !important;
+	/*#156CE3*/
+	/*#28282D, #535B60*/
+}
+.logo-image {
+	padding-top:15px !important;
+}
+#menu-container {
+	background-color: #186980 !important;
+}
+#menu-container li a:hover {
+	color: red !important;
+}
+.buceo-image {
+	max-width: 400px !important;
+	max-height: 185px !important;
+}
+.buceo-image:hover {
+	max-width: 100% !importan !importantt;
+	max-height: 100% !important;
+}
+#submenu {
+	background-color: #186980 !important;
+	border: 0 !important;
+}
+.carousel-item {
+	max-width:640px !important;
+	height:380px !important;
+}
+.container-fluid  {
+	background-image: url('../images/madera.jpg') !important;
+	/*#06C3DF, linear-gradient(black, #7C8688)*/
+/*	background-blend-mode: overlay;*/
+	background-repeat: no-repeat !important;
+	background-size: 100% 100% !important;
+	background-attachment: fixed !important;
+	/*background:;*/
+	/*#156CE3*/
+	font-family: 'Roboto Condensed', sans-serif !important;
+	color: white !important;
+	max-width: 100%;
+	max-height: auto;
+	/*background:linear-gradient( #535B60 , #28282D  );*/
+}
+.content-page {
+	background: black !important;
+	/*background:linear-gradient( #28282D, #535B60 );*/
+}
+.head-content {
+	text-decoration: none !important;
+}
+.rio1 {
+	max-width: 50% !important;
+	max-height: 50% !important;
+}
+.rio2 {
+	max-width: 65% !important;
+	max-height: 60% !important;
+}
+.facevideo {
+	max-width:100% !important;
+	max-height:100% !important;
+}
+.facecomment {
+	max-width:100% !important;
+	max-height:100% !important;
+}
+#diving a {
+	color:blue;
+	text-decoration-color:red;
+	background: linear-gradient(to bottom left, red, white, red);
+}
+.display-4 {
+	padding-top:20px !important;
+}
+.reef {
+	margin-top: 35px !important;
+}
+.footer {
+	margin-top:-35px !important;
+	/*background-color: #5E5A5A;*/
+	color:white !important;
+}
+.foot-text {
+	padding:0,30px !important;
+}
+.logo-footer {
+	padding: 30px !important;
+
+}
+.mark_text {
+	margin-top:12px !important;
+}
+.button-service a {
+	text-decoration: none !important;
+	color:white !important;
+}
+.comentarios {
+	background-color: black !important;
+	margin: 2px !important;
+}
+#card-reserve {
+	background: rgba(0,0,0,0.3) !important;
+}
+#img-reserve {
+	max-height: 15rem !important;
+}
+.clima {
+	max-width: 100%;
+}
+/*@media (max-width:780px) {
+	.container-fluid {
+		background: linear-gradient(#5F5F5F, #5C95F5 20%) !important;
+		background-blend-mode: multiply !important;
+	}
+}*/

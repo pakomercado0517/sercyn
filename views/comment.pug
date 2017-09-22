@@ -1,0 +1,59 @@
+extends layout
+
+block content_comment
+  .container-fluid
+    .row
+      .col-sm-12.col-md-12.col-lg-12
+        #cont_0a9e71ce7839cdacc0acf13367b7c624.clima
+          script(type='text/javascript', async='', src='https://www.meteored.mx/wid_loader/0a9e71ce7839cdacc0acf13367b7c624')
+    .row.after-title
+      .col-sm-12.col-md-8.col-lg-10.wow.slideInRight
+        form(action='/mailing', method='POST')
+          .form-group
+            label(for='exampleInputEmail1') Deja tus comentarios
+          .form-group
+            label(for='exampleTextarea name') Escribe tu nombre
+            input.form-control.name(type='text', name='name', id='exampleTextarea name',aria-describedby='emailHelp',placeholder='Nombre')
+          .form-group
+            label(for='exampleInputEmail1mail') Tu Correo
+            input.form-control.mail(type='email', name='mail', id='exampleInputEmail1 mail',aria-describedby='emailHelp',placeholder='Email')
+            label(for='exampleInputNumber') Ingresa tu Numero Telefonico
+          .form-group
+            input.form-control-number.number(type='number', name='number', id='exampleInputNumber', aria-describedby='numberHelp', placeholder='Numero Teléfono')
+          .form-group
+            label(for='services') Escoge tu destino
+            select.form-control#services.services(name='services')
+              option Río Tuxpan
+              option Arrecifes
+              option Isla de lobos
+          .form-group
+            label(for='person') Número de personas (niños mayores de 3 años, pagan el servicio)
+              select.form-control#person.person(name='person')
+                option 1
+                option 2
+                option 3
+                option 4
+                option 5
+                option 6
+                option 7
+                option 8
+                option 9
+                option 10
+          .form-group
+            label(for='date') Escoge la Fecha a Reservar
+            input(type='date', step='1', name='date')
+          .form-group
+            label(for='exampleTextarea', id='message') Escribe tu comentario!
+            textarea.form-control(id='exampleTextarea', name='message', rows='3')
+            button.btn.btn-secondary(type='submit') Enviar
+      .col-sm-12.col-md-8.col-lg-10.push-lg-4.wow.slideInRight
+        div(name='respuesta')
+      //- .col-sm-12.col-md-8.col-lg-10
+      //-   .fb-login-button(data-max-rows='1', data-size='large', data -button-type='continue_with', data-show-faces='false', data-auto-logout-link='true', data-use-continue-as='true')
+      //- .col-sm-12.col-md-8.col-lg-10
+      //-   .wow.slideInUp.fb-comments.facecomment(data-href='http://www.sercyn.com/comment', data-numposts='10', data-width='100%',  data-mobile='true')
+      //- .col-sm-12.col-md-8.col-lg-10
+      //-   .fb-like(data-href='http://www.sercyn.com/comment',  data-layout='button-count', data-action='like', data-size='large', data-show-faces='true', data-share='true')
+  script(src='/javascript/compras.js')
+
+

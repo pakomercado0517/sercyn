@@ -1,0 +1,35 @@
+extends layout
+
+block content_reservar
+  .container-fluid
+    .row
+      .col-sm-12.col-md-12.col-lg-12
+        h1.display-6.text-center Reserva tu paquete
+    .row.justify-content-around
+      .col-sm-10.col-md-6.col-lg-4
+        .card.service_rio(style='width:20rem;')#card-reserve
+          img.card-img-top#img-reserve(src='/images/servicio_rio.JPG')
+          .card-block
+            h4.card-title Paseo por el Río Tuxpan
+            p.card-text#text-reserve Disfruta de un agradable paseo a lo largo de nuestro bello río. Te encantaran los hermosos paisajes dignos de una increíble postal.
+            button.btn.btn-primary(onclick='reservar()') Reserva 
+      .col-sm-10.col-md-6.col-lg-4
+        .card.service_reef(style='width:20rem;')#card-reserve
+          img.card-img-top#img-reserve(src='/images/servicio-arrecife.jpg')
+          .card-block
+            h4.card-title Visita a los Arrecifes
+            p.card-text#text-reserve Descubre las maravillas de las diferentes especies que habitan en ellos.
+            button.btn.btn-primary(onclick='reservar()') Reserva
+      .col-sm-10.col-md-6.col-lg-4
+        .card.service_lobos(style='width:20rem;')#card-reserve
+          img.card-img-top#img-reserve(src='/images/servicio-lobos.JPG')
+          .card-block
+            h4.card-title Conoce la Isla de Lobos
+            p.card-text#text-reserve Atrevete a disfrutar de una incursión magnífica enla Isla, no te arrepentiras
+            button.btn.btn-primary(onclick='reservar()') Reserva
+      .col-12.price_per_person
+
+
+  script(src='/javascript/compras.js')
+
+
