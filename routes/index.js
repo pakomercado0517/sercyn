@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const sendMailer= require('../models/email')
 
 
 /* GET home page. */
@@ -21,6 +22,7 @@ router.get('/comment', function(req,res, next) {
 router.get('/reservar', function(req, res, next) {
 	res.render('reservacion', {title: 'Reservacion-Ecoturismo, Pesca deportiva y Servicios Turísticos'})
 })
+router.post('/mailing', sendMailer)
 router.get('/shopping', function (req,res, next) {
 	res.render('compra', {title: 'Reservacion-Ecoturismo, Pesca deportiva y Servicios Turísticos'})
 })
