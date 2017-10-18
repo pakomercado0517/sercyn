@@ -6,14 +6,14 @@ function sendMailer(req, res, next) {
       port: 465,
       secure: true,
       auth: {
-        user:'fgme.facturacion@b-and-bconsultores.com.mx',
-        pass: 'alexa1512'
+        user:'sercyn_web@sercyn.com',
+        pass: 'chisqueado0517'
       } 
   })
 
   let mailOptions= {
-    from: 'fgme.facturacion@b-and-bconsultores.com.mx',
-    to: 'sissyyayle0517@hotmail.com',
+    from: 'sercyn_web@sercyn.com',
+    to: 'admin@sercyn.com',
     subject: 'Mensaje de www.sercyn.com',
     text: req.body.message,
     html: `<p>De: ${req.body.name}</p><br><p>Correo: ${req.body.mail}</p><br><p>Teléfono: ${req.body.number}</p><br><p>Destino: ${req.body.services}</p><br><p>Servicio para: ${req.body.person} persona(s)</p><br><p>Para la fecha: ${req.body.date}</p><br><p>Mensaje: ${req.body.message}</p>`
