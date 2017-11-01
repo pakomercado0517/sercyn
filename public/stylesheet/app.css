@@ -13,6 +13,9 @@ html, body {
 	color:white !important;
 	back
 }
+#sercyn-carousel {
+	max-height: 25% !important;
+}
 #titulo {
 	font-family: Yellowtail !important;
 }
@@ -136,9 +139,18 @@ html, body {
 .clima {
 	max-width: 100%;
 }
-/*@media (max-width:780px) {
-	.container-fluid {
+#reef_image_1 {
+	-moz-transform: rotate(50deg)!important;
+	-o-transform: rotate(50deg)!important;
+	-webkit-transform: rotate(50deg)!important;
+	transform: rotate(50deg)!important;
+}
+@media (max-width:780px) {
+/*	.container-fluid {
 		background: linear-gradient(#5F5F5F, #5C95F5 20%) !important;
 		background-blend-mode: multiply !important;
+	}*/
+	.h5 {
+		font-size: 50% !important;
 	}
-}*/
+}
