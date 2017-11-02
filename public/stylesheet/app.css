@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Architects+Daughter|Bungee+Inline|Yellowtail|Shrikhand|Poppins|Roboto+Condensed');
 
 html, body {
-	color: blue; 
 	background-color: #5E5A5A !important; 
 	box-sizing: border-box !important;
 }
@@ -11,7 +10,7 @@ html, body {
 }
 #nav-service a {
 	text-decoration: none !important;
-	color:blue !important;
+	color:white !important;
 	back
 }
 #sercyn-carousel {
@@ -60,16 +59,16 @@ html, body {
 	height:380px !important;
 }
 .container-fluid  {
-	background-image: url('../images/water-splash.jpg') !important;
-	/*#06C3DF, linear-gradient(black, #7C8688)*/
-/*	background-blend-mode: overlay;*/
+	/*background-image: url('../images/water-splash.jpg') !important;*/
+	background: #0C9DB2/*, linear-gradient(blue, #7C8688)*/;
+	background-blend-mode: overlay;
 	background-repeat: no-repeat !important;
 	background-size: 100% 100% !important;
 	background-attachment: fixed !important;
 	/*background:;*/
 	/*#156CE3*/
 	font-family: 'Roboto Condensed', sans-serif !important;
-	color: blue !important;
+	color: white !important;
 	max-width: 100%;
 	max-height: auto;
 	/*background:linear-gradient( #535B60 , #28282D  );*/
@@ -111,7 +110,7 @@ html, body {
 .footer {
 	margin-top:-35px !important;
 	/*background-color: #5E5A5A;*/
-	color:blue !important;
+	color:white !important;
 }
 .foot-text {
 	padding:0,30px !important;
