@@ -141,10 +141,16 @@ html, body {
 	max-width: 100%;
 }
 #reef_image_1 {
-	-moz-transform: rotate(50deg)!important;
-	-o-transform: rotate(50deg)!important;
-	-webkit-transform: rotate(50deg)!important;
-	transform: rotate(50deg)!important;
+	-moz-transform: rotate(-15deg)!important;
+	-o-transform: rotate(-15deg)!important;
+	-webkit-transform: rotate(-15deg)!important;
+	transform: rotate(-15deg)!important;
+}
+#reef_image_3 {
+	-moz-transform: rotate(15deg)!important;
+	-o-transform: rotate(15deg)!important;
+	-webkit-transform: rotate(15deg)!important;
+	transform: rotate(15deg)!important;	
 }
 @media (max-width:780px) {
 /*	.container-fluid {
