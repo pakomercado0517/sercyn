@@ -29,8 +29,10 @@ html, body {
 	margin-top: 0 !important;
 }
 #logo  {
-	background:linear-gradient(#69A6FA, #1E1E1E 20%) !important;
-	/*#156CE3*/
+background: -webkit-linear-gradient(#69A6FA, #1E1E1E 20%) !important;
+/*background: -o-linear-gradient(#69A6FA, #1E1E1E 20%) !important;
+background: linear-gradient(#69A6FA, #1E1E1E 20%) !important;
+*/	/*#156CE3*/
 	/*#28282D, #535B60*/
 }
 .logo-image {
@@ -60,8 +62,10 @@ html, body {
 }
 .container-fluid  {
 	/*background-image: url('../images/water-splash.jpg') !important;*/
-	background: #0C9DB2/*, linear-gradient(blue, #7C8688)*/;
-	background-blend-mode: overlay;
+	background: linear-gradient( #034399 , #5EA2FF, #405999  ); 
+	
+	/*background: #0C9DB2, linear-gradient(blue, #7C8688);*/
+	background-blend-mode: multiply;
 	background-repeat: no-repeat !important;
 	background-size: 100% 100% !important;
 	background-attachment: fixed !important;
@@ -71,7 +75,6 @@ html, body {
 	color: white !important;
 	max-width: 100%;
 	max-height: auto;
-	/*background:linear-gradient( #535B60 , #28282D  );*/
 }
 .content-page {
 	background: black !important;
