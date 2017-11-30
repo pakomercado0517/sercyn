@@ -61,24 +61,20 @@ background: linear-gradient(#69A6FA, #1E1E1E 20%) !important;
 	height:380px !important;
 }
 .container-fluid  {
-	/*background-image: url('../images/water-splash.jpg') !important;*/
-	background: linear-gradient( #034399 , #5EA2FF, #405999  ); 
-	
-	/*background: #0C9DB2, linear-gradient(blue, #7C8688);*/
+	background-color: rgba(0,0,0,0.3);
+	background-image: url('../images/bg_sercyn_2-min.JPG');
 	background-blend-mode: multiply;
 	background-repeat: no-repeat !important;
-	background-size: 100% 100% !important;
+	background-size: cover !important;
+	background-position: center center;
 	background-attachment: fixed !important;
-	/*background:;*/
-	/*#156CE3*/
 	font-family: 'Roboto Condensed', sans-serif !important;
 	color: white !important;
-	max-width: 100%;
+	max-width: 100% !important;
 	max-height: auto;
 }
 .content-page {
 	background: black !important;
-	/*background:linear-gradient( #28282D, #535B60 );*/
 }
 .head-content {
 	text-decoration: none !important;
@@ -153,12 +149,4 @@ background: linear-gradient(#69A6FA, #1E1E1E 20%) !important;
 	-o-transform: rotate(15deg)!important;
 	-webkit-transform: rotate(15deg)!important;
 	transform: rotate(15deg)!important;	
-}
-@media (max-width:780px) {
-/*	.container-fluid {
-		background: linear-gradient(#5F5F5F, #5C95F5 20%) !important;
-		background-blend-mode: multiply !important;
-	}*/
-
-	
 }
