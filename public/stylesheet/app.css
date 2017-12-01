@@ -4,17 +4,59 @@ html, body {
 	background-color: #5E5A5A !important; 
 	box-sizing: border-box !important;
 }
-.container, .container-fluid  {
+.container-fluid  {
 	max-width: 100% !important;
 	overflow: hidden !important;
+	background-color: rgba(0,0,0,0.3);
+	-webkit-background-image: url('../images/bg_sercyn_2-min.JPG');
+	-moz-background-image: url('../images/bg_sercyn_2-min.JPG');
+	background-image: url('../images/bg_sercyn_2-min.JPG');
+	-webkit-background-blend-mode: multiply;
+	-moz-background-blend-mode: multiply;
+	background-blend-mode: multiply;
+	-moz-background-blend-mode: multiply;
+	-webkit-background-repeat: no-repeat !important;
+	-webkit-background-repeat: no-repeat !important;
+	-moz-background-repeat: no-repeat !important;
+	background-repeat: no-repeat !important;
+	-webkit-background-size: cover !important;
+	-moz-background-size: cover !important;
+	background-size: cover !important;
+	-webkit-background-position: center center;
+	-moz-background-position: center center;
+	background-position: center center;
+	-webkit-background-attachment: fixed !important;
+	-moz-background-attachment: fixed !important;
+	background-attachment: fixed !important;
+	-webkit-font-family: 'Roboto Condensed', sans-serif !important;
+	-moz-font-family: 'Roboto Condensed', sans-serif !important;
+	font-family: 'Roboto Condensed', sans-serif !important;
+	color: white !important;
+	-webkit-max-width: 100% !important;
+	-moz-max-width: 100% !important;
+	max-width: 100% !important;
+	-webkit-max-height: auto;
+	-moz-max-height: auto;
+	max-height: auto;
+	-webkit-min-height: 600px;
+	-mozmin-height: 600px;
+	min-height: 600px;
 }
 #nav-service a {
 	text-decoration: none !important;
 	color:white !important;
 	back
 }
-#sercyn-carousel {
-	max-height: 25% !important;
+
+.carousel-item {
+	max-width:100% !important;
+	max-height:380px !important;
+}
+.carousel-item img {
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 #titulo {
 	font-family: Yellowtail !important;
@@ -44,34 +86,9 @@ background: linear-gradient(#69A6FA, #1E1E1E 20%) !important;
 #menu-container li a:hover {
 	color: red !important;
 }
-.buceo-image {
-	max-width: 400px !important;
-	max-height: 185px !important;
-}
-.buceo-image:hover {
-	max-width: 100% !importan !importantt;
-	max-height: 100% !important;
-}
 #submenu {
 	background-color: #186980 !important;
 	border: 0 !important;
-}
-.carousel-item {
-	max-width:640px !important;
-	height:380px !important;
-}
-.container-fluid  {
-	background-color: rgba(0,0,0,0.3);
-	background-image: url('../images/bg_sercyn_2-min.JPG');
-	background-blend-mode: multiply;
-	background-repeat: no-repeat !important;
-	background-size: cover !important;
-	background-position: center center;
-	background-attachment: fixed !important;
-	font-family: 'Roboto Condensed', sans-serif !important;
-	color: white !important;
-	max-width: 100% !important;
-	max-height: auto;
 }
 .content-page {
 	background: black !important;

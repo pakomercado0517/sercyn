@@ -2,37 +2,22 @@ extends layout
 
 block content
   // presentacion del contenido
-  #slide-tittle.container-fluid
-    .row.justify-content-center.align-items-start.wow.slideInUp.after-title
-      .col.col-sm-12.col-md-6.col-lg-6.wow.zoomIn
-        a(href='/')
-          h1.display-5.text-white.text-center.head-content Náutica SerCyn
-        br
-        br
-      .col-sm-12.col-md-10.col-lg-10.wow.zoomIn
-        p.h5.text-justify Somos una empresa con mucha dedicación, calidad y seguridad en todos nuestros servicios. Si te gustan los 
-          strong Deportes Extremos, la Pesca Deportiva, el Snorkel y el Buceo
-          |  somos tu mejor opción; contamos con todos los permisos para hacer uso de 
-          strong las áreas protegidas
-          |  , además, contamos con la 
-          strong certificación de seguridad
-          |  en la que nuestros clientes, no solo llevan la satisfacción de un viaje placentero, sino, desde el momento que estrechamos la mano, cuentan con la seguridad necesaria para cualquier tipo de insidente.   
-          br
-          br
+  .container-fluid
+    .col-xs-12.wow.slideInRight
       #SerCyn-carousel.carousel.slide(data-ride='carousel')
         .carousel-inner(role='listbox')
           .carousel-item.active
-            img.d-block.img-fluid(src='/images/slider/slide-SerCyn-1-min.jpg', alt='First slide SerCyn-Tuxpan-Veracruz')
+            img.d-block.img-fluid(src='/images/slider/slide_sercyn_1.JPG', alt='First slide SerCyn-Tuxpan-Veracruz')
           .carousel-item
-            img.d-block.img-fluid(src='/images/slider/slide-SerCyn-2-min.JPG', alt='Second slide SerCyn-Tuxpan-Veracruz')
+            img.d-block.img-fluid(src='/images/slider/slide_sercyn_2.JPG', alt='Second slide SerCyn-Tuxpan-Veracruz')
           .carousel-item
-            img.d-block.img-fluid(src='/images/slider/slide-SerCyn-3-min.jpg', alt='Thirth slide SerCyn-Tuxpan-Veracruz')
+            img.d-block.img-fluid(src='/images/slider/servicio-lobos.JPG', alt='Thirth slide SerCyn-Tuxpan-Veracruz')
           .carousel-item
             img.d-block.img-fluid(src='/images/slider/slide-SerCyn-4-min.jpg', alt='Fourth slide SerCyn-Tuxpan-Veracruz')
           .carousel-item
             img.d-block.img-fluid(src='/images/slider/slide-SerCyn-5-min.jpg', alt='Fifth slide SerCyn-Tuxpan-Veracruz')
           .carousel-item
-            img.d-block.img-fluid(src='/images/slider/slide-SerCyn-6-min.jpg', alt='Sixth slide SerCyn-Tuxpan-Veracruz')
+            img.d-block.img-fluid(src='/images/slider/vista2.jpg', alt='Sixth slide SerCyn-Tuxpan-Veracruz')
           .carousel-item
             img.d-block.img-fluid(src='/images/slider/slide-SerCyn-7-min.JPG', alt='Seventh slide SerCyn-Tuxpan-Veracruz')
           .carousel-item
@@ -45,18 +30,22 @@ block content
         a.carousel-control-next(href='#SerCyn-carousel', role='button', data-slide='next')
           span.carousel-control-next-icon(aria-hidden='true')
           span.sr-only Next
-    .row.justify-content-center
-      .col-sm-12.col-md-12.col-lg-10.col-xs-9.wow.infinite.pulse
-        h1.display-4.text-center(align='center') ¡Conócenos!
-      .col-xs-12.col-sm-12.col-md-12.col-lg-12       
-        h1.display-6.mark_text.text-center(align='center') Difruta de las maravillas que Tuxpan, Veracruz te prepara.
-          br 
-          br
-          br
-        h1.display-5.text-center ¡No te arrepentiras! 
-          br
-          small Somos el puerto más cercano a la Ciudad de México.
-      .col-sm-12.col-md-12
+    .row.justify-content-center.align-items-start.wow.slideInUp.after-title
+      .col-sm-12.col-md-6.wow.zoomIn
+        br
+        br
+        a(href='/')
+          h1.display-5.text-white.text-center.head-content Náutica SerCyn
+        br
+        br
+      .col-sm-12.col-md-10.col-lg-10.wow.zoomIn
+        p.h5.text-justify Somos una empresa con mucha dedicación, calidad y seguridad en todos nuestros servicios. Si te gustan los 
+          strong Deportes Extremos, la Pesca Deportiva, el Snorkel y el Buceo
+          |  somos tu mejor opción; contamos con todos los permisos para hacer uso de 
+          strong las áreas protegidas
+          |  , además, contamos con la 
+          strong certificación de seguridad
+          |  en la que nuestros clientes, no solo llevan la satisfacción de un viaje placentero, sino, desde el momento que estrechamos la mano, cuentan con la seguridad necesaria para cualquier tipo de insidente.   
     .row.justify-content-center.wow.slideInRight
       #video-carousel.carousel.slide
         .carousel-inner(role='listbox')
@@ -81,7 +70,19 @@ block content
           span.sr-only Previous
         a.carousel-control-next(href='#video-carousel', role='button', data-slide='next')
           span.carousel-control-next-icon(aria-hidden='true')
-          span.sr-only Next
+          span.sr-only Next  
+    .row.justify-content-center
+      .col-sm-12.col-md-12.col-lg-10.col-xs-9.wow.infinite.pulse
+        h1.display-4.text-center(align='center') ¡Conócenos!
+      .col-xs-12.col-sm-12.col-md-12.col-lg-12       
+        h1.display-6.mark_text.text-center(align='center') Difruta de las maravillas que Tuxpan, Veracruz te prepara.
+          br 
+          br
+          br
+        h1.display-5.text-center ¡No te arrepentiras! 
+          br
+          small Somos el puerto más cercano a la Ciudad de México.
+      .col-sm-12
     .row
       .col-12
         ul.nav.nav-tabs.facevideo.justify-content-center#nav-service
