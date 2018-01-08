@@ -50,7 +50,7 @@ html, body {
 
 .carousel-item {
 	max-width:100% !important;
-	max-height:380px !important;
+	max-height:600px !important;
 }
 .carousel-item img {
 	background-size: cover;
@@ -171,4 +171,8 @@ background: linear-gradient(#69A6FA, #1E1E1E 20%) !important;
 	.container-fluid {
 		background-color: #2478E1;
 	}	
+
+	.carousel-item {
+		max-height: 0.5rem;
+	}
 }
