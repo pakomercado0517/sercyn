@@ -170,7 +170,7 @@ background: linear-gradient(#69A6FA, #1E1E1E 20%) !important;
 	-webkit-transform: rotate(15deg)!important;
 	transform: rotate(15deg)!important;	
 }
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 780px) {
 	.container-fluid {
 		background-color: #2478E1;
 	}	
