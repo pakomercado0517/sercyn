@@ -80,6 +80,9 @@ background: linear-gradient(#69A6FA, #1E1E1E 20%) !important;
 .logo-image {
 	padding-top:15px !important;
 }
+.footer-contact {
+	margin-top: 55px;
+}
 #menu-container {
 	background-color: #186980 !important;
 }
@@ -128,9 +131,9 @@ background: linear-gradient(#69A6FA, #1E1E1E 20%) !important;
 	/*background-color: #5E5A5A;*/
 	color:white !important;
 }
-.foot-text {
+/*.foot-text {
 	padding:0,30px !important;
-}
+}*/
 .logo-footer {
 	padding: 30px !important;
 
@@ -167,12 +170,27 @@ background: linear-gradient(#69A6FA, #1E1E1E 20%) !important;
 	-webkit-transform: rotate(15deg)!important;
 	transform: rotate(15deg)!important;	
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 420px) {
 	.container-fluid {
 		background-color: #2478E1;
 	}	
 
 	.carousel-item {
 		max-height: 0.5rem;
+	}
+	.footer {
+		display: flex;
+		align-items: center;
+		justify-content: center;	
+		position: relative;
+	}
+
+/*	.logo-footer {
+		max-width: 50%;
+		max-height: 60%;
+	}*/
+	.foot-text {
+		padding:0;
+		max-width: 25%;
 	}
 }

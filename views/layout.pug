@@ -83,17 +83,17 @@ html(lang='en')
       block content_shopping
       block contentPrivacy     
       footer.footer
-        .row.justify-content-center
-          .col-sm-4.col-md-3.col-lg-4.col-xl-4.align-self-center.foot-text#footer_text1
+        .row.justify-content-around
+          .col-sm-2.align-self-center.foot-text#footer_text1.hidden-sm-down
             p.wow.zoomIn.text-left Sercyn 
               br
               small.wow.zoomIn Ecoturismo, Pesca Deportiva y
               br
               | Tour-Service
-          .col-sm-4.col-md-3.col-lg-4.offset-lg-1#footer_image
-            img.logo-footer.wow.slideInUp(src='/images/logo-sercyn.png', width="180", height="220")
-          .col-sm-4.col-md-4.col-lg-3.col-xl-3.foot-text#footer_text2
-            p.text-right 
+          .col-sm-2#footer_image
+            img.logo-footer.wow.slideInUp.align-self-center(src='/images/logo-sercyn.png', width="125", height="160")
+          .col-sm-2.foot-text#footer_text2.hidden-sm-down
+            p.text-right.footer-contact 
               strong Contáctanos 
                 br
               small Teléfono: 783-104-6697 
