@@ -37,14 +37,13 @@ html(lang='en')
      }(document, 'script', 'facebook-jssdk'));
     // logo
     .container-fluid
-      section#logo.after-title
-        .row.text-center
-          .col.col-xs-12.col-sm-12.col-md-4
-            img.logo-image.img.wow.flipInX(src='/images/logo-sercyn.png', width="100", height="150" alt='logo, responsive image')
-          #titulo.col.col-xs-12.col-md-8.hidden-sm-down.wow.slideInRight
-            p.text-white.n Náutica
-            h1.text-white SerCyn
-            p.text-white Tour Service, Ecoturismo y Pesca Deportiva 
+      .row.text-center
+        .col.col-xs-12.col-sm-12.col-md-4
+          img.logo-image.img.wow.flipInX(src='/images/logo-sercyn.png', width="100", height="150" alt='logo, responsive image')
+        #titulo.col.col-xs-12.col-md-8.hidden-sm-down.wow.slideInRight
+          p.text-white.n Náutica
+          h1.text-white SerCyn
+          p.text-white Tour Service, Ecoturismo y Pesca Deportiva 
       // /logo
       // menu de navegación
       .row
@@ -52,7 +51,7 @@ html(lang='en')
           nav.navbar.navbar-toggleable-md.navbar-inverse.bg-inverse
             button.navbar-toggler.navbar-toggler-right.wow.zoomInLeft(type='button', data-toggle='collapse', data-target='#navbarNavDropdown', aria-controls='navbarNavDropdown', aria-expanded='false', aria-label='Toggle navigation')
               span.navbar-toggler-icon
-            a.navbar-brand.wow.zoomInLeft(href='#') Náutica SerCyn
+            a.navbar-brand.wow.zoomInLeft(href='/') Náutica SerCyn
             #navbarNavDropdown.collapse.navbar-collapse
               ul.navbar-nav
                 li.nav-item.active
