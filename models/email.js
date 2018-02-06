@@ -1,5 +1,6 @@
 var nodemailer= require('nodemailer')
 
+
 function sendMailer(req, res, next) {
   let transporter= nodemailer.createTransport({
       host: 'smtp.zoho.com',
@@ -25,7 +26,9 @@ function sendMailer(req, res, next) {
     }
     console.log('Mensaje enviado con éxito' + info)
   })
-  res.redirect('/comment')  
+  setTimeout(() => {
+    res.redirect('/comment')
+  }, 8000)  
 }
 
 
