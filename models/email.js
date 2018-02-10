@@ -28,7 +28,7 @@ function sendMailer(req, res, next) {
   })
   setTimeout(() => {
     res.redirect('/comment')
-  }, 8000)  
+  }, 5000)  
 }
 
 
