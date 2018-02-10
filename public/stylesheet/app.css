@@ -170,6 +170,14 @@ background: linear-gradient(#69A6FA, #1E1E1E 20%) !important;
 	-webkit-transform: rotate(15deg)!important;
 	transform: rotate(15deg)!important;	
 }
+
+#costo {
+	background: rgba(255,255,255,0.7);
+	color:#dc143c!important;
+	border-radius: 8px;
+	margin-left:45px;
+}
+/*pantallas chicas*/
 @media only screen and (max-width: 780px) {
 	.container-fluid {
 		background-color: #2478E1;
@@ -183,6 +191,9 @@ background: linear-gradient(#69A6FA, #1E1E1E 20%) !important;
 		align-items: center;
 		justify-content: center;	
 		position: relative;
+	}
+	#costo {
+		margin-left: 0;
 	}
 
 /*	.logo-footer {

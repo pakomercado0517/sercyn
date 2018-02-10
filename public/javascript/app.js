@@ -25,11 +25,11 @@ var vm = new Vue({
       var item6= 11000
 
       if(this.sercyn.persons == 0 && place == place) {
-        return `Hola! ${this.sercyn.name}`
+        return null
       }
       else if(this.sercyn.persons <= 7 && place == 'rio') {
         swal('Hola!', `El costo total del paquete es de $${item1} con un máximo de 7 personas`)
-        return price + Math.ceil(item1/this.sercyn.persons)
+        return  price + Math.ceil(item1/this.sercyn.persons)
       }
       else if(person > 7 && place == 'rio') {
         swal('Hola!', `El costo total del paquete es de ${item2} con un máximo de 14 personas`)
