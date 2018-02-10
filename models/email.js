@@ -20,11 +20,24 @@ function sendMailer(req, res, next) {
     html: `<p>De: ${req.body.name}</p><br><p>Correo: ${req.body.mail}</p><br><p>Teléfono: ${req.body.number}</p><br><p>Destino: ${req.body.services}</p><br><p>Servicio para: ${req.body.person} persona(s)</p><br><p>Para la fecha: ${req.body.date}</p><br><p>Mensaje: ${req.body.message}</p>`
   }
 
+  let sendAnswer = {
+    from: 'sercyn_web@sercyn.com',
+    to: `${req.body.mail}`,
+    subject: `Saludos ${req.body.name}!` ,
+    text: `Hola ${req.body.name}: Muchas gracias por comunicarte con nosotros, haremos contacto contigo lo mas breve posible.`,
+  }
+
   transporter.sendMail(mailOptions, (error, info) => {
     if(error) {
       return console.log(`El mensaje no pudo enviarse:${error}`)
     }
     console.log('Mensaje enviado con éxito' + info)
+  })
+  transporter.sendMail(sendAnswer, (error, info) => {
+    if(error) {
+      return console.log(`El mensaje no pudo enviarse:${error}`)
+    }
+    console.log('Respuesta enviada con éxito' + info)
   })
   setTimeout(() => {
     res.redirect('/comment')
