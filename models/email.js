@@ -24,8 +24,23 @@ function sendMailer(req, res, next) {
     from: 'sercyn_web@sercyn.com',
     to: `${req.body.mail}`,
     subject: `Saludos ${req.body.name}!` ,
-    text: `Hola ${req.body.name}: Muchas gracias por comunicarte con nosotros, haremos contacto contigo lo mas breve posible.`,
-  }
+    html: `
+    <div align= "center">
+      <h1>Hola ${req.body.name}: Muchas gracias por comunicarte con nosotros, haremos contacto contigo lo mas breve posible.</h1>
+      <br/>
+      <h3>El servicio que solicitas incluye:</h3><br/><br/>
+          Nevera</br>
+          Hielo</br>
+          Agua Embotellada</br>
+          Refrescos</br>
+          Chalecos de Seguridad</br>
+          Botiquín</br>
+          Tiempo máximo estimado de estancia de 6 hrs.</br>
+      <br/>
+      <h3> Gracias por su Preferencia.</h3>
+      <img src='http://www.sercyn.com/images/logo-sercyn.png' width="150" height="225"></img>  
+    </div>`
+  } 
 
   transporter.sendMail(mailOptions, (error, info) => {
     if(error) {
