@@ -17,12 +17,12 @@ var vm = new Vue({
       var place= this.sercyn.place;
       var price= this.sercyn.price;
       var person= this.sercyn.persons;
-      var item1= 1800;
-      var item2= 3600;
-      var item3= 3500
-      var item4= 7000
-      var item5= 5500
-      var item6= 11000
+      var item1= 2000;
+      var item2= 4000;
+      var item3= 4200
+      var item4= 8000
+      var item5= 6000
+      var item6= 12000
 
       if(this.sercyn.persons == 0 && place == place) {
         return null
