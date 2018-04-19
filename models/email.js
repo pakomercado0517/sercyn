@@ -17,7 +17,7 @@ function sendMailer(req, res, next) {
     to: 'admin@sercyn.com',
     subject: 'Mensaje de www.sercyn.com',
     text: req.body.message,
-    html: `<p>De: ${req.body.name}</p><br><p>Correo: ${req.body.mail}</p><br><p>Teléfono: ${req.body.number}</p><br><p>Destino: ${req.body.services}</p><br><p>Servicio para: ${req.body.person} persona(s)</p><br><p>Para la fecha: ${req.body.date}</p><br><p>Mensaje: ${req.body.message}</p>`
+    html: `<p>De: ${req.body.name} ${req.body.apellido}</p><br><p>Correo: ${req.body.mail}</p><br><p>Teléfono: ${req.body.number}</p><br><p>Destino: ${req.body.services}</p><br><p>Servicio para: ${req.body.person} persona(s)</p><br><p>Para la fecha: ${req.body.date}</p><br><p>Mensaje: ${req.body.message}</p>`
   }
 
   let sendAnswer = {

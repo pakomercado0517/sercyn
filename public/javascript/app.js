@@ -6,6 +6,7 @@ var vm = new Vue({
     sercyn:{
       price:' El Costo por persona es de $',
       name:'',
+      apellido:'',
       email:'',
       phone:'',
       persons: 0,

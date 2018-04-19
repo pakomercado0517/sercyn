@@ -13,8 +13,11 @@ block content_comment
             //- | {{$data}}
             label(for='exampleInputEmail1') Reserva tu Servicio o deja tus comentarios
           .form-group
-            label(for='exampleTextarea name') Escribe tu nombre
-            input.form-control.name(type='text', name='name', id='exampleTextarea name',aria-describedby='emailHelp',placeholder='Nombre',v-model='sercyn.name')
+            label(for='exampleTextarea name') Nombres(s)
+            input.form-control.name(type='text', name='name', id='exampleTextarea name',aria-describedby='emailHelp',placeholder='Nombre(s)',v-model='sercyn.name')
+          .form-group
+            label(for='exampleTextarea name') Apellidos
+            input.form-control.name(type='text', name='apellido', id='exampleTextarea apellido',aria-describedby='emailHelp',placeholder='Apellidos',v-model='sercyn.apellido')
           .form-group
             label(for='exampleInputEmail1mail') Tu Correo
             input.form-control.mail(type='email', name='mail', id='exampleInputEmail1 mail',aria-describedby='emailHelp',placeholder='Email', v-model='sercyn.email')
