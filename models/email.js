@@ -5,23 +5,22 @@ function sendMailer(req, res, next) {
   let transporter= nodemailer.createTransport({
       host: 'smtp.zoho.com',
       port: 465,
-      secure: true,
       auth: {
-        user:'sercyn_web@sercyn.com',
+        user:'admin@sercyn.com',
         pass: 'chisqueado0517'
       } 
   })
 
   let mailOptions= {
-    from: 'sercyn_web@sercyn.com',
-    to: 'admin@sercyn.com',
+    from:'admin@sercyn.com' ,
+    to: 'sercyn_web@sercyn.com',
     subject: 'Mensaje de www.sercyn.com',
     text: req.body.message,
     html: `<p>De: ${req.body.name} ${req.body.apellido}</p><br><p>Correo: ${req.body.mail}</p><br><p>Teléfono: ${req.body.number}</p><br><p>Destino: ${req.body.services}</p><br><p>Servicio para: ${req.body.person} persona(s)</p><br><p>Para la fecha: ${req.body.date}</p><br><p>Mensaje: ${req.body.message}</p>`
   }
 
   let sendAnswer = {
-    from: 'sercyn_web@sercyn.com',
+    from: 'admin@sercyn.com',
     to: `${req.body.mail}`,
     subject: `Saludos ${req.body.name}!` ,
     html: `
