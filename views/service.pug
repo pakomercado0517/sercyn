@@ -1,0 +1,66 @@
+extends layout
+
+block service
+  .container-fluid
+    .row
+      .col-sm-12.mx-auto
+        h3.text-center
+          span.fa.fa-list-alt
+            |  Lista de Servicios
+        br
+        a.btn.btn-primary(href='/service/nuevo')
+          span.fa.fa-plus-square
+            |  Nuevo
+        #service
+          table.table.table-striped
+            thead
+              tr
+                th Nombre Representante
+                th Personas a bordo
+                th Fecha
+                //- th(colspan='2') Operación
+            each item in services
+              tr
+                td.text-center= item.name+' '+item.lastName
+                td.text-center= item.persons
+                td.text-center= item.date
+                //- td
+                //-   a(href='/service/modificar/'+item._id)
+                //-     | Modificar
+                //- td
+                //-   a(href='/service/eliminar/'+item._id)
+                //-     | Eliminar
+       
+
+
+
+
+
+
+
+
+
+
+        //- p
+        //-   a(href='/agregar_servicio') 
+        //-     span.fa.fa-plus-circle
+        //-       |  Añadir Servicio
+        //- hr
+        //- if(services.length > 0)
+        //-   table
+        //-     thead
+        //-       tr
+        //-         th Fecha
+        //-         th Nombre
+        //-         th Email
+        //-     tbody
+        //-       each service in services
+        //-         tr
+        //-           td #{service.local.date}
+        //-           td #{service.local.name}
+        //-           //- td #{user.local.email}
+        //-           td(href='/lista_servicios/#{service.local._id}') Ver 
+        //-           td editar 
+        //-           td eliminar 
+        //- else
+        //-   p No existen registros.

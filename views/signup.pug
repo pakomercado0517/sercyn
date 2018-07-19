@@ -1,0 +1,30 @@
+extends layout
+
+block signup
+  .container-fluid
+    .row.mt-6.wow.slideInUp
+      .col-sm-12.mx-auto
+        h1.text-center
+          span.fa.fa-sign-in
+            |  Registrate
+        #message
+          if message.length > 0
+            .alert.alert-danger #{ message }
+        form(action='/signup' method='POST')
+          .form-group
+            label(for='name') Nombre Completo
+            input.form-control(type='text', name='name')
+          .form-group
+            label(for='email') Email
+            input.form-control(type='email', name='email')
+          .form-group
+            label(for='password') Contraseña
+            input.form-control(type='password', name='password')
+          .form-group.text-center
+            input.btn.btn-primary(type='submit')
+          hr
+          .text-center
+            p ¿Ya tienes una cuenta? 
+            a(href='/login') Inicia Sesión
+            br
+            a(href='/acceso') Ve a inicio

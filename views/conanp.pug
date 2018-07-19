@@ -1,0 +1,15 @@
+extends layout
+
+block conanp
+  .container-fluid
+    .row.justify-content-center
+      .col-xs-8.align-self-center.wow.slideInUp 
+        h1.text-center
+          span.fa.fa-lock
+          |  Inicia sesión o Registrate 
+        a.btn.btn-light.btn-lg.active(href='/login', role='button', aria-pressed='true')
+          span.fa.fa-user
+           |  Inicia Sesión
+        a.btn.btn-light.btn-lg.active(href='/signup', role='button', aria-pressed='true')
+          span.fa.fa-user
+           |  Registrate

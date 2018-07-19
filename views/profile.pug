@@ -1,0 +1,26 @@
+extends layout
+
+block profile
+  .container-fluid
+    header.text-center
+      h1 Perfil de Usuario
+      a.btn.btn-primary.btbn-sm(href='/logout')  Cerrar Sesión
+    hr
+    .container-fluid
+      .col-sm-12.mx-auto
+        h3
+          span.fa.fa-user
+          |  Tu Perfil
+        p
+          strong id 
+          |: #{user._id}
+          br
+          strong name 
+          |: #{user.local.name}
+          br
+          strong email 
+          |: #{user.local.email}
+          br
+          strong password : #{user.local.password}
+          br
+          a.btn.btn-primary(href='/logout') Cerrar Sesión

@@ -1,0 +1,19 @@
+.container-fluid
+  .row
+    .col-sm-12.mt-8.mx-auto
+      form(action='/serviceForm/service/operar', method='POST')
+        input(type='hidden', name='_id', value='#{service._id}')
+        .form-group
+          label(for='name') Nombres
+          input.form-control(type='text', name='name', id='name', value='#{service.name}')
+        .form-group
+          label(for='lastName') Apellidos
+          input.form-control(type='text', name='lastName', id='lastName', value='#{service.lastName}')
+        .form-group
+          label(for='email') Correo Electrónico
+          input.form-control(type='email', id='email', name='email', value='#{service.email}')
+        .form-group
+          label(for='date')
+          input.form-control(type='date', id='date', name='date', required pattern='[0-9]{4}-[0-9]{2}-[0-9]{2}', value='#{service.date}')
+        button.btn.btn-primary(type='submit') Aceptar
+        a.btn.btn-danger(href='/service') Cancelar
