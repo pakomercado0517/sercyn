@@ -75,6 +75,10 @@ function isLoggedIn(req, res, next) {
 // crud services
 
 
+router.get('/conanp', (req, res, next) => {
+  res.redirect('/service')
+})
+
 router.get('/service', isLoggedIn, (req, res, next) => {
   Service.find((err, services) => {
     if (err) throw err
