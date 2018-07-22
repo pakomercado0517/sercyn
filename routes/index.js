@@ -79,6 +79,13 @@ router.get('/conanp', (req, res, next) => {
   res.redirect('/service')
 })
 
+router.get('/admin', isLoggedIn, (req,res,next) => {
+  Service.find((err,services) =>{
+    if(err) throw err
+    res.render('adminService', {services: services})
+  })
+})
+
 router.get('/service', isLoggedIn, (req, res, next) => {
   Service.find((err, services) => {
     if (err) throw err
@@ -93,7 +100,7 @@ router.get('/service/modificar/:id', isLoggedIn, (req, res, next) => {
   let idService= req.params.id
   Service.findOne({_id: idService}, (err, service) => {
     if (err) throw err
-    res.render('serviceForm', {service: service})
+    res.render('serviceFormUpdate', {service: service})
   })
 })
 
@@ -101,7 +108,7 @@ router.get('/service/eliminar/:id', isLoggedIn, (req, res, next) => {
   let idService= req.params.id
   Service.remove({_id: idService}, (err) => {
     if(err) throw err
-    res.redirect('/service')
+    res.redirect('/admin')
   })
 })
 
