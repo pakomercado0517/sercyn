@@ -130,7 +130,7 @@ html(lang='en')
       function captcha_response() {
       let response= grecaptcha.getResponse();
 
-      if(response.length == 0) {
-        swal('Error', 'Necesitas verificar el captcha', 'error')
+        if(response.length == 0) {
+          swal('Error', 'Necesitas verificar el captcha', 'error')
+        }
       }
-    }
