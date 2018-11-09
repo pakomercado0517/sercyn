@@ -59,9 +59,10 @@ var vm = new Vue({
 
 // Alerta de envio de formulario
 $('.form-contact').submit(function() {
-    swal('Muchas Gracias!', 'Tu mensaje ha sido enviado', 'success')
-  .fail(function(){
-    swal('Lo sentimos!','Hubo un error en el envío', 'error')
-  })
+    let response= grecaptcha.getResponse();
+    if(response.length == 0){
+      swal('Lo sentimos!','Hubo un error en el envío', 'error')
+    }
+    else swal('Muchas Gracias!', 'Tu mensaje ha sido enviado', 'success')
 })
 

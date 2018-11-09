@@ -127,10 +127,3 @@ html(lang='en')
     script.
       new WOW().init()
 
-      function captcha_response() {
-      let response= grecaptcha.getResponse();
-
-        if(response.length == 0) {
-          swal('Error', 'Necesitas verificar el captcha', 'error')
-        }
-      }
