@@ -8,7 +8,7 @@ block content_comment
           script(type='text/javascript', async='', src='https://www.meteored.mx/wid_loader/0a9e71ce7839cdacc0acf13367b7c624')
     .row.after-title
       .col-sm-12.col-md-8.col-lg-10.wow.slideInRight
-        form(action='/mailing', method='POST')#form-contact.form-contact
+        form(action='/mailing', method='POST', onubmit='captcha_response()')#form-contact.form-contact
           .form-group
             //- | {{$data}}
             label(for='exampleInputEmail1') Reserva tu Servicio o deja tus comentarios
