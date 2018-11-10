@@ -39,14 +39,30 @@ function sendMailer(req, res, next) {
       <h3> Gracias por su Preferencia.</h3>
       <img src='http://www.sercyn.com/images/logo-sercyn.png' width="150" height="225"></img>  
     </div>`
-  } 
+  }
+
 
   transporter.sendMail(mailOptions, (error, info) => {
+    // if(req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response']=== '' || req.body['g-recaptcha-response'] === null) {
+    //   return res.json({'responseCode': 1, 'responseDesc': 'Por favor selecciona el captcha...'})
+    // }
+    // const secretKey= '6LdstnkUAAAAABQjQu64PPlcdW1KaKO2M7H_ymIW';
+
+    // let verifyUrl= `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${req.body["g-recaptcha-response"]}&remoteip=${req.connection.remoteAddress}`;
+
+    // request(verifyUrl, function(error, response,body) {
+    //   body=JSON.parse(body);
+    //   if(body.success !== undefined && !body.success) {
+    //     return res.json({'responseCode': 1, 'responseDesc': 'Falló verificación de captcha'})
+    //   }
+    //   console.log(`Mensaje enviado con exito ${info}`)
+    // })
     if(error) {
       return console.log(`El mensaje no pudo enviarse:${error}`)
     }
     console.log('Mensaje enviado con éxito' + info)
   })
+
   transporter.sendMail(sendAnswer, (error, info) => {
     if(error) {
       return console.log(`El mensaje no pudo enviarse:${error}`)

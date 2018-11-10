@@ -10,7 +10,7 @@ var vm = new Vue({
       email:'',
       phone:'',
       persons: 0,
-      place: null
+      place: null,
     }
   },
   computed: {
@@ -56,13 +56,25 @@ var vm = new Vue({
   }
 })
 
-
 // Alerta de envio de formulario
+// function captcha(a) {
+//   var response= grecaptcha.getResponse();
+//   if(reponse.length == 0) {
+//     swal('Error', 'Captcha no verificado', 'error');
+//     return false;
+//     event.preventDefault();
+//   } else {
+//     swal('Muchas Gracias!', 'Tu mensaje ha sido enviado con exito', 'success');
+//     return true;
+//   }
+// }
+
+
+
 $('.form-contact').submit(function() {
-    let response= grecaptcha.getResponse();
-    if(response.length == 0){
-      swal('Lo sentimos!','Hubo un error en el envío', 'error')
-    }
-    else swal('Muchas Gracias!', 'Tu mensaje ha sido enviado', 'success')
+    swal('Muchas Gracias!', 'Tu mensaje ha sido enviado', 'success')
+  .fail(function(){
+    swal('Lo sentimos!','Hubo un error en el envío', 'error')
+  })
 })
 

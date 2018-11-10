@@ -8,7 +8,7 @@ block content_comment
           script(type='text/javascript', async='', src='https://www.meteored.mx/wid_loader/0a9e71ce7839cdacc0acf13367b7c624')
     .row.after-title
       .col-sm-12.col-md-8.col-lg-10.wow.slideInRight
-        form(action='/mailing', method='POST', onubmit='captcha_response()')#form-contact.form-contact
+        form(action='/mailing', method='POST')#form-contact.form-contact
           .form-group
             //- | {{$data}}
             label(for='exampleInputEmail1') Reserva tu Servicio o deja tus comentarios
@@ -61,12 +61,11 @@ block content_comment
             .form-group
               label(for='exampleTextarea', id='message') Escribe tu comentario!
               textarea.form-control(id='exampleTextarea', name='message', rows='3')
-              .g-recaptcha(data-sitekey='6LdstnkUAAAAAHM4zWbZAXYfJ7V3fYD1tI4Ax5_j',data-theme='dark')
+              .g-recaptcha(data-sitekey='6LdstnkUAAAAAHM4zWbZAXYfJ7V3fYD1tI4Ax5_j',data-callback='enabledSubmit',data-theme='dark',v-model='sercyn.captcha')
+              .div(v-show= "sercyn.captcha != null")
               br
-              button.btn.btn-secondary(type='submit') Enviar
-              br
-
-
+              button.btn.btn-secondary.button-contact(type='submit') Enviar
+              br 
       //- h2 Por Favor, llena el formulario.
       //- .col-sm-12.col-md-8.col-lg-10
       //-   .fb-login-button(data-max-rows='1', data-size='large', data -button-type='continue_with', data-show-faces='false', data-auto-logout-link='true', data-use-continue-as='true')
