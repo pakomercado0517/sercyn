@@ -1,68 +1,64 @@
 extends layout
 
 block content2
-  // contenido
-  .container-fluid
-    .row.after-title.justify-content-center
-      .col-xs-12.col-sm-12.col-md-12.col-lg-10
-        h1.display-4.text-center Río Tuxpan
-    .row
-      .col-xs-12.col-sm-12.col-md-12.col-lg-4.push-lg-4
-        img.responsive.img-thumbnail.rounded-right.wow.slideInLeft.facevideo(src='images/rio1-min.jpg', alt='responsive img Río Tuxpan')
-      .col.col-sm-12.col-md-12.col-lg-9.push-lg-1.align-self-center.wow.slideInRight
-        p.lead.text-justify
-          | El río Tuxpan, ubicado en la costa oriental de la República mexicana, desemboca en el 
-          strong Golfo de México 
-          | , cerca de la ciudad del puerto de Tuxpan de Rodríguez Cano en el estado de Veracruz, tiene una longitud de 150 Km.
-    .row.justify-content-between
-      .col-sm-12.col-2.push-lg-5.push-md-5.push-xs-2.push-sm-2
+  .row.justify-content-center
+    .col-sm-12
+      h1.display-4.text-center Río Tuxpan
+    .col-xs-12.col-sm-12.col-md-12.col-lg-4.mt-3
+      img.responsive.img-thumbnail.rounded-right.wow.slideInLeft.facevideo(src='images/rio1-min.jpg', alt='responsive img Río Tuxpan')
+    .col.col-sm-12.col-md-12.col-lg-9.mt-2.wow.slideInRight
+      p.lead.text-justify
+        | El río Tuxpan, ubicado en la costa oriental de la República mexicana, desemboca en el 
+        strong Golfo de México 
+        | , cerca de la ciudad del puerto de Tuxpan de Rodríguez Cano en el estado de Veracruz, tiene una longitud de 150 Km.
+  .row.justify-content-between
+    .col-sm-12.col-2.push-lg-5.push-md-5.push-xs-2.push-sm-2
+      br
+      br
+      h3.wow.fadeIn
+        | Actividades 
+      br
+      br
+    .col-12
+    .col-sm-12.col-md-12.col-lg-4.push-lg-1.push-md-1.wow.slideInLeft
+      p.lead.text-justify
+        | El río Tuxpan es sede de algunas actividades, como lo es la 
+        strong Pesca Deportiva
+        |  , en la que para muchos aficionados, es un lugar magnífico para practicarla, semejantemente, a los que nunca lo han hecho, es el lugar ideal a probar suerte e iniciar este deporte. 
         br
         br
-        h3.wow.fadeIn
-          | Actividades 
+        br
+    .col-sm-12.col-md-12.col-lg-4.pull-lg-1
+      img.img-thumbnail.rounded-left.float-lg-right.rio1.wow.slideInUp.facevideo(src='images/rio2-min.jpg', alt='Río Tuxpan')
+    .col.col-12
+    .col-sm-12.col-md-12.col-lg-4.push-lg-7.wow.fadeInRightBig
+      p.lead.text-justify
         br
         br
-      .col-12
-      .col-sm-12.col-md-12.col-lg-4.push-lg-1.push-md-1.wow.slideInLeft
-        p.lead.text-justify
-          | El río Tuxpan es sede de algunas actividades, como lo es la 
-          strong Pesca Deportiva
-          |  , en la que para muchos aficionados, es un lugar magnífico para practicarla, semejantemente, a los que nunca lo han hecho, es el lugar ideal a probar suerte e iniciar este deporte. 
-          br
-          br
-          br
-      .col-sm-12.col-md-12.col-lg-4.pull-lg-1
-        img.img-thumbnail.rounded-left.float-lg-right.rio1.wow.slideInUp.facevideo(src='images/rio2-min.jpg', alt='Río Tuxpan')
-      .col.col-12
-      .col-sm-12.col-md-12.col-lg-4.push-lg-7.wow.fadeInRightBig
-        p.lead.text-justify
-          br
-          br
-          | Contamos con una variedad de calidad en paseos, con recorrido a lo largo del Río, a los esteros de 
-          strong Tenechaco
-          |  y 
-          strong Tumilco
-          | , la laguna de 
-          strong Tampamachoco
-          |  y/o conocer los hermosos 
-          strong Manglares
-          |  que se encuentran en la zona 
-          br
-          br
-      .col-sm-12.col-md-12.col-lg-4.pull-lg-7
-        img.img-thumbnail.rounded-right.float-lg-left.rio2.wow.zoomIn.facevideo(src='images/rio3-min.jpg', alt='Río Tuxpan')
-      .col-sm-12.col-md-12.col-lg-6.align-self-center.wow.lightSpeedIn
-        p.lead.text-justify
-          | Al igual, contamos con el servicio de paseos nocturnos, donde podra pasar una velada romántica a la luz de la Luna, con el mejor paisaje, obtieniendo recuerdos inolvidables.
-      .col-sm-12.col-md-12.col-lg-4.pull-lg-1
-        img.img-thumbnail.rounded-left.float-lg-right.wow.rotateInDownRight.rio1.facevideo(src='images/rio4-min.jpg', alt='Río Tuxpan')
-    .row
-      .col-12
-        ul.nav.nav-tabs.facevideo.justify-content-center#nav-service
-          li.nav-item.wow.fadeInDown
-            a.nav-link#comment(href='/comment') Reservaciones
-          li.nav-item.wow.slideInLeft
-            a.nav-link(href='/arrecife') Arrecífes
-          li.nav-item.wow.slideInRight
-            a.nav-link(href='/lobos') Isla Lobos
+        | Contamos con una variedad de calidad en paseos, con recorrido a lo largo del Río, a los esteros de 
+        strong Tenechaco
+        |  y 
+        strong Tumilco
+        | , la laguna de 
+        strong Tampamachoco
+        |  y/o conocer los hermosos 
+        strong Manglares
+        |  que se encuentran en la zona 
+        br
+        br
+    .col-sm-12.col-md-12.col-lg-4.pull-lg-7
+      img.img-thumbnail.rounded-right.float-lg-left.rio2.wow.zoomIn.facevideo(src='images/rio3-min.jpg', alt='Río Tuxpan')
+    .col-sm-12.col-md-12.col-lg-6.align-self-center.wow.lightSpeedIn
+      p.lead.text-justify
+        | Al igual, contamos con el servicio de paseos nocturnos, donde podra pasar una velada romántica a la luz de la Luna, con el mejor paisaje, obtieniendo recuerdos inolvidables.
+    .col-sm-12.col-md-12.col-lg-4.pull-lg-1
+      img.img-thumbnail.rounded-left.float-lg-right.wow.rotateInDownRight.rio1.facevideo(src='images/rio4-min.jpg', alt='Río Tuxpan')
+    .col-12
+      ul.nav.nav-tabs.facevideo.justify-content-center#nav-service
+        li.nav-item.wow.fadeInDown
+          a.nav-link#comment(href='/comment') Reservaciones
+        li.nav-item.wow.slideInLeft
+          a.nav-link(href='/arrecife') Arrecífes
+        li.nav-item.wow.slideInRight
+          a.nav-link(href='/lobos') Isla Lobos
   // contenido

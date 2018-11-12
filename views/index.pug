@@ -2,8 +2,8 @@ extends layout
 
 block content
   // presentacion del contenido
-  .container-fluid
-    .col-xs-12.wow.slideInRight
+  //- .row.justify-content-center
+    //.col-xs-12.wow.slideInRight
       //- #SerCyn-carousel.carousel.slide(data-ride='carousel')
       //-   .carousel-inner(role='listbox')
       //-     .carousel-item.active
@@ -30,84 +30,76 @@ block content
       //-   a.carousel-control-next(href='#SerCyn-carousel', role='button', data-slide='next')
       //-     span.carousel-control-next-icon(aria-hidden='true')
       //-     span.sr-only Next
-    .row.justify-content-center.align-items-start.wow.slideInUp.after-title
-      .col-sm-12.col-md-6.wow.zoomIn
+  .row.justify-content-center.wow.slideInUp
+    .col-sm-12.col-md-6.mt-5.wow.zoomIn
+      a(href='/')
+        h1.display-5.text-white.text-center.head-content Náutica SerCyn
+    .col-sm-12.mt-5.wow.zoomIn.text-center
+      p.h5.text-justify Somos una empresa con mucha dedicación, calidad y seguridad en todos nuestros servicios. Si te gustan los 
+        strong Deportes Extremos, la Pesca Deportiva, el Snorkel y el Buceo
+        |  somos tu mejor opción; contamos con todos los permisos para hacer uso de 
+        strong las áreas protegidas
+        |  , además, contamos con la 
+        strong certificación de seguridad
+        |  en la que nuestros clientes, no solo llevan la satisfacción de un viaje placentero, sino, desde el momento que estrechamos la mano, cuentan con la seguridad necesaria para cualquier tipo de insidente.   
+    .col-sm-12.col-md-5.col-lg-5.mt-4
+      .carousel-inner(role='listbox')
+        .carousel-item.active
+          iframe.facevideo(src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsercyn13%2Fvideos%2F1907027426210525%2F&show_text=0&width=560", width='560', height='315', style='border:none;overflow:hidden', scrolling="no", frameborder="0", allowTransparency="true", allowFullScreen="true")
+        .carousel-item
+          iframe.facevideo(src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsercyn13%2Fvideos%2F1908098299436771%2F&show_text=0&width=560", width='560', height='315', style='border:none;overflow:hidden', scrolling="no", frameborder="0", allowTransparency="true", allowFullScreen="true")
+        .carousel-item
+          iframe.facevideo(src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsercyn13%2Fvideos%2F1909163512663583%2F&show_text=0&width=560", width='560', height='315', style='border:none;overflow:hidden', scrolling="no", frameborder="0", allowTransparency="true", allowFullScreen="true")
+        .carousel-item
+          iframe.facevideo(src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsercyn13%2Fvideos%2F1912567125656555%2F&show_text=0&width=560", width='560', height='315', style='border:none;overflow:hidden', scrolling="no", frameborder="0", allowTransparency="true", allowFullScreen="true")
+        .carousel-item
+          iframe.facevideo(src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsercyn13%2Fvideos%2F1916940855219182%2F&show_text=0&width=560", width='560', height='315', style='border:none;overflow:hidden', scrolling="no", frameborder="0", allowTransparency="true", allowFullScreen="true")
+        .carousel-item
+          iframe.facevideo(src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsercyn13%2Fvideos%2F1918517405061527%2F&show_text=0&width=560", width='560', height='315', style='border:none;overflow:hidden', scrolling="no", frameborder="0", allowTransparency="true", allowFullScreen="true")
+        .carousel-item
+          iframe.facevideo(src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsercyn13%2Fvideos%2F1918519251728009%2F&show_text=0&width=560", width='560', height='315', style='border:none;overflow:hidden', scrolling="no", frameborder="0", allowTransparency="true", allowFullScreen="true")
+        .carousel-item
+          iframe.facevideo(src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsercyn13%2Fvideos%2F1919307574982510%2F&show_text=0&width=560", width='560', height='315', style='border:none;overflow:hidden', scrolling="no", frameborder="0", allowTransparency="true", allowFullScreen="true")
+      a.carousel-control-prev(href='#video-carousel', role='button', data-slide='prev')
+        span.carousel-control-prev-icon(aria-hidden='true')
+        span.sr-only Previous
+      a.carousel-control-next(href='#video-carousel', role='button', data-slide='next')
+        span.carousel-control-next-icon(aria-hidden='true')
+        span.sr-only Next  
+  .row.justify-content-center
+    .col-sm-12.col-md-12.col-lg-10.col-xs-9.wow.infinite.pulse
+      h1.display-4.text-center(align='center') ¡Conócenos!
+    .col-xs-12.col-sm-12.col-md-12.col-lg-12       
+      h1.display-6.mark_text.text-center(align='center') Difruta de las maravillas que Tuxpan, Veracruz te prepara.
+        br 
         br
         br
-        a(href='/')
-          h1.display-5.text-white.text-center.head-content Náutica SerCyn
+      h1.display-5.text-center ¡No te arrepentiras! 
         br
-        br
-      .col-sm-12.col-md-10.col-lg-10.wow.zoomIn
-        p.h5.text-justify Somos una empresa con mucha dedicación, calidad y seguridad en todos nuestros servicios. Si te gustan los 
-          strong Deportes Extremos, la Pesca Deportiva, el Snorkel y el Buceo
-          |  somos tu mejor opción; contamos con todos los permisos para hacer uso de 
-          strong las áreas protegidas
-          |  , además, contamos con la 
-          strong certificación de seguridad
-          |  en la que nuestros clientes, no solo llevan la satisfacción de un viaje placentero, sino, desde el momento que estrechamos la mano, cuentan con la seguridad necesaria para cualquier tipo de insidente.   
-    .row.justify-content-center.wow.slideInRight
-      #video-carousel.carousel.slide
-        .carousel-inner(role='listbox')
-          .carousel-item.active
-            iframe.facevideo(src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsercyn13%2Fvideos%2F1907027426210525%2F&show_text=0&width=560", width='560', height='315', style='border:none;overflow:hidden', scrolling="no", frameborder="0", allowTransparency="true", allowFullScreen="true")
-          .carousel-item
-            iframe.facevideo(src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsercyn13%2Fvideos%2F1908098299436771%2F&show_text=0&width=560", width='560', height='315', style='border:none;overflow:hidden', scrolling="no", frameborder="0", allowTransparency="true", allowFullScreen="true")
-          .carousel-item
-            iframe.facevideo(src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsercyn13%2Fvideos%2F1909163512663583%2F&show_text=0&width=560", width='560', height='315', style='border:none;overflow:hidden', scrolling="no", frameborder="0", allowTransparency="true", allowFullScreen="true")
-          .carousel-item
-            iframe.facevideo(src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsercyn13%2Fvideos%2F1912567125656555%2F&show_text=0&width=560", width='560', height='315', style='border:none;overflow:hidden', scrolling="no", frameborder="0", allowTransparency="true", allowFullScreen="true")
-          .carousel-item
-            iframe.facevideo(src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsercyn13%2Fvideos%2F1916940855219182%2F&show_text=0&width=560", width='560', height='315', style='border:none;overflow:hidden', scrolling="no", frameborder="0", allowTransparency="true", allowFullScreen="true")
-          .carousel-item
-            iframe.facevideo(src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsercyn13%2Fvideos%2F1918517405061527%2F&show_text=0&width=560", width='560', height='315', style='border:none;overflow:hidden', scrolling="no", frameborder="0", allowTransparency="true", allowFullScreen="true")
-          .carousel-item
-            iframe.facevideo(src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsercyn13%2Fvideos%2F1918519251728009%2F&show_text=0&width=560", width='560', height='315', style='border:none;overflow:hidden', scrolling="no", frameborder="0", allowTransparency="true", allowFullScreen="true")
-          .carousel-item
-            iframe.facevideo(src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsercyn13%2Fvideos%2F1919307574982510%2F&show_text=0&width=560", width='560', height='315', style='border:none;overflow:hidden', scrolling="no", frameborder="0", allowTransparency="true", allowFullScreen="true")
-        a.carousel-control-prev(href='#video-carousel', role='button', data-slide='prev')
-          span.carousel-control-prev-icon(aria-hidden='true')
-          span.sr-only Previous
-        a.carousel-control-next(href='#video-carousel', role='button', data-slide='next')
-          span.carousel-control-next-icon(aria-hidden='true')
-          span.sr-only Next  
-    .row.justify-content-center
-      .col-sm-12.col-md-12.col-lg-10.col-xs-9.wow.infinite.pulse
-        h1.display-4.text-center(align='center') ¡Conócenos!
-      .col-xs-12.col-sm-12.col-md-12.col-lg-12       
-        h1.display-6.mark_text.text-center(align='center') Difruta de las maravillas que Tuxpan, Veracruz te prepara.
-          br 
-          br
-          br
-        h1.display-5.text-center ¡No te arrepentiras! 
-          br
-          small Somos el puerto más cercano a la Ciudad de México.
-      .col-sm-12
-    .row
-      .col-sm-12
-        ul.nav.nav-tabs.facevideo.justify-content-center#nav-service
-          li.nav-item.wow.fadeInDown
-            a.nav-link#comment(href='/comment') Reservaciones
-          li.nav-item.wow.slideInLeft
-            a.nav-link(href='/rio') Río tuxpan
-          li.nav-item.wow.slideInUp
-            a.nav-link(href='/arrecife') Arrecífes
-          li.nav-item.wow.slideInRight
-            a.nav-link(href='/lobos') Isla Lobos
-    .container
-      .row
-        .col-sm-12.col-md-8.col-lg-10
-          .fb-login-button(data-max-rows='1', data-size='large', data -button-type='continue_with', data-show-faces='false', data-auto-logout-link='true', data-use-continue-as='true')
-        .col-sm-12.col-md-8.col-lg-10
-          .wow.slideInUp.fb-comments.facecomment(data-href='http://www.sercyn.com/comment', data-numposts='10', data-width='100%',  data-mobile='true')
-        .col-sm-12.col-md-8.col-lg-10
-          .fb-like(data-href='http://www.sercyn.com/comment',  data-layout='button-count', data-action='like', data-size='large', data-show-faces='true', data-share='true', data-colorscheme='dark')
-        //- .col-sm12.col-md-12.col-lg-6
-        //-   iframe.facecomment(src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fgerardo.solano.121%2Fposts%2F10207377001516548%3A0&width=500" width="500" height="335" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true")
-        //- .col-12.col-md-12.col-lg-6
-        //-   iframe.facecomment(src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FPakoMercado85%2Fposts%2F1170085443048050%3A0&width=500" width="500" height="335" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true")
-        //- .col-12.col-md-12.col-lg-6
-        //-   iframe.facecomment(src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D1517934531565429%26id%3D100000466909251%26substory_index%3D0&width=500" width="500" height="335" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true")
-        //- .col-sm-12.col-md-12.col-lg-6
-        //-   iframe.facecomment(src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fisaac.campostrejo%2Fposts%2F1093606957394052%3A0&width=500" width="500" height="335" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true")
+        small Somos el puerto más cercano a la Ciudad de México.
+    .col-sm-12.col-md-12.col-lg-12.mt-5
+      ul.nav.nav-tabs.facevideo.justify-content-center#nav-service
+        li.nav-item.wow.fadeInDown
+          a.nav-link#comment(href='/comment') Reservaciones
+        li.nav-item.wow.slideInLeft
+          a.nav-link(href='/rio') Río tuxpan
+        li.nav-item.wow.slideInUp
+          a.nav-link(href='/arrecife') Arrecífes
+        li.nav-item.wow.slideInRight
+          a.nav-link(href='/lobos') Isla Lobos
+    //- facebook comments
+    .col-sm-12.col-md-8.col-lg-10
+      .fb-login-button(data-max-rows='1', data-size='large', data -button-type='continue_with', data-show-faces='false', data-auto-logout-link='true', data-use-continue-as='true')
+    .col-sm-12.col-md-8.col-lg-10
+      .wow.slideInUp.fb-comments.facecomment(data-href='http://www.sercyn.com/comment', data-numposts='10', data-width='100%',  data-mobile='true')
+    .col-sm-12.col-md-8.col-lg-10
+      .fb-like(data-href='http://www.sercyn.com/comment',  data-layout='button-count', data-action='like', data-size='large', data-show-faces='true', data-share='true', data-colorscheme='dark')
+    //- .col-sm12.col-md-12.col-lg-6
+    //-   iframe.facecomment(src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fgerardo.solano.121%2Fposts%2F10207377001516548%3A0&width=500" width="500" height="335" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true")
+    //- .col-12.col-md-12.col-lg-6
+    //-   iframe.facecomment(src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FPakoMercado85%2Fposts%2F1170085443048050%3A0&width=500" width="500" height="335" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true")
+    //- .col-12.col-md-12.col-lg-6
+    //-   iframe.facecomment(src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D1517934531565429%26id%3D100000466909251%26substory_index%3D0&width=500" width="500" height="335" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true")
+    //- .col-sm-12.col-md-12.col-lg-6
+    //-   iframe.facecomment(src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fisaac.campostrejo%2Fposts%2F1093606957394052%3A0&width=500" width="500" height="335" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true")
   // /presentacion del contenido

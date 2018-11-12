@@ -1,38 +1,34 @@
 extends layout
 
 block content4
-  .container-fluid
-    .row.justify-content-center
-      .col.col-sm-10.col-md-10.col-lg-10.col-xl-10
-        img.img-fluid.wow.fadeInDownBig.facevideo(alt='responsive image isla_de_lobos', src="/images/lobos-min.jpg")
-    .row.justify-content-center
-      .col-sm-12.col-md-8.col-lg-6.col-xl-6
-        h1.display-2.text-center.wow.fadeInDown Isla de Lobos
-      .col-sm-10.col-md-7.col-lg-8.col-lg-9.col-xl-9
-        p.h4.text-justify.wow.flipInY Este lugar se encuentra situado a 18 millas al noroeste de la población de 
-          strong Tamiahua
-          |  y a 4 millas del suroeste de 
-          strong Cabo Rojo.
-          br
-          | Aunque la fauna no es muy basta, sin duda, es deigna de admirarse, los hermosos paisajes cobijan a la isla, haciéndola ver muy atractiva para la vista. Los atardeceres son dignos de una postal, y los paisajes submarinos son una joya marina, ya que se encuentra rodeada de maravillosos arrecífes, algunos de ellos sombríos y por otro lado otros llenos de vida y de paisajes caribeños.
-          br
-          | Entre las actividades se pueden practicar en esta hermosa Isla, encontramos el 
-          strong Buceo y el Snorkell,
-          |  puedes recorrer los enormes senderos rodeados de amplias y refrescantes palmeras, relajarte a la orilla del mar o descansar en una hamaca para tomar una rica y relajante siesta.
-          br
-          | Para poder pasar la noche ahí, el lugar cuenta con una zona de 
-          strong campings
-          |  , en donde puedes llevar tus casas de campaña y disfrutar de la aventura al aire libre, ideal para un fin de semana o vacaciones.
-    .row
-      .col-sm-12.col-md-12.col-lg-12
-        img.img-fluid.wow.slideInLeft.facevideo(alt='responsive image isla_de_lobos', src="/images/isla_lobos_2-min.JPG")
-    .row
-      .col-12
-        ul.nav.nav-tabs.facevideo.justify-content-center#nav-service
-          li.nav-item.wow.fadeInDown
-            a.nav-link#comment(href='/comment') Reservaciones
-          li.nav-item.wow.slideInLeft
-            a.nav-link(href='/rio') Río Tuxpan
-          li.nav-item.wow.slideInRight
-            a.nav-link(href='/arrecife') Arrecífes
+  .row.justify-content-center
+    .col.col-sm-10.col-md-10.col-lg-10
+      img.img-fluid.wow.slideInLeft.facevideo(alt='responsive image isla_de_lobos', src="/images/isla_lobos_2-min.JPG")
+    .col-sm-12.col-md-8.col-lg-6.mt-3
+      h1.display-2.text-center.wow.fadeInDown Isla de Lobos
+    .col-sm-10.col-md-7.col-lg-8.col-lg-9.mt-3
+      p.h4.text-justify.wow.flipInY Este lugar se encuentra situado a 18 millas al noroeste de la población de 
+        strong Tamiahua
+        |  y a 4 millas del suroeste de 
+        strong Cabo Rojo.
+        br
+        | Aunque la fauna no es muy basta, sin duda, es digna de admirarse, los hermosos paisajes cobijan a la isla, haciéndola ver muy atractiva para la vista. Los atardeceres son dignos de una postal, y los paisajes submarinos son una joya marina, ya que se encuentra rodeada de maravillosos arrecífes, algunos de ellos sombríos y por otro lado otros llenos de vida y de paisajes caribeños.
+        br
+        | Entre las actividades se pueden practicar en esta hermosa Isla, encontramos el 
+        strong Buceo y el Snorkell,
+        |  puedes recorrer los enormes senderos rodeados de amplias y refrescantes palmeras, relajarte a la orilla del mar o descansar en una hamaca para tomar una rica y relajante siesta.
+        br
+        | Para poder pasar la noche ahí, el lugar cuenta con una zona de 
+        strong campings
+        |  , en donde puedes llevar tus casas de campaña y disfrutar de la aventura al aire libre, ideal para un fin de semana o vacaciones.
+    .col-sm-12.col-md-8.col-lg-8.mt-3
+      img.img-fluid.wow.fadeInDownBig.facevideo(alt='responsive image isla_de_lobos', src="/images/lobos-min.jpg")
+    .col-12.mt-5
+      ul.nav.nav-tabs.facevideo.justify-content-center#nav-service
+        li.nav-item.wow.fadeInDown
+          a.nav-link#comment(href='/comment') Reservaciones
+        li.nav-item.wow.slideInLeft
+          a.nav-link(href='/rio') Río Tuxpan
+        li.nav-item.wow.slideInRight
+          a.nav-link(href='/arrecife') Arrecífes
 

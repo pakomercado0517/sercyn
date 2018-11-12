@@ -55,6 +55,7 @@ var vm = new Vue({
     } 
   }
 })
+Vue.config.devtools = true;
 
 // Alerta de envio de formulario
 // function captcha(a) {
