@@ -128,9 +128,7 @@ background: linear-gradient(#69A6FA, #1E1E1E 20%) !important;
 	margin-top: 35px !important;
 }
 .footer {
-	margin-top:-35px !important;
-	/*background-color: #5E5A5A;*/
-	color:white !important;
+	background-color: rgba(0,0,0,0.6)
 }
 /*.foot-text {
 	padding:0,30px !important;
@@ -207,5 +205,13 @@ background: linear-gradient(#69A6FA, #1E1E1E 20%) !important;
 	.foot-text {
 		padding:0;
 		max-width: 25%;
+	}
+	footer {
+		display:none;
+	}
+}
+@media (min-width: 576px) {
+	footer {
+		display:none;
 	}
 }

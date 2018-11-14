@@ -93,26 +93,25 @@ html(lang='en')
       //- footer
 
 
-      footer.footer
-        .row.justify-content-around
-          .col-sm-2.align-self-center.foot-text#footer_text1.hidden-sm-down
-            p.wow.zoomIn.text-left Sercyn 
+      .row.justify-content-around.footer
+        .col-sm-3.col-md-2.col-lg-2
+          p.wow.zoomIn Sercyn 
+            br
+            small.wow.zoomIn Ecoturismo, Pesca Deportiva y
+            br
+            | Tour-Service
+        .col-sm-3.col-md-2.col-lg-2.ml-3
+          img.wow.slideInUp(src='/images/logo-sercyn.png', width="80", height="100")
+        .col-sm-3.col-md-2.col-lg-2
+          p 
+            strong Contáctanos 
               br
-              small.wow.zoomIn Ecoturismo, Pesca Deportiva y
+            small Teléfono: 783-104-6697 
               br
-              | Tour-Service
-          .col-sm-2#footer_image
-            img.logo-footer.wow.slideInUp.align-self-center(src='/images/logo-sercyn.png', width="125", height="160")
-          .col-sm-2.foot-text#footer_text2.hidden-sm-down
-            p.text-right.footer-contact 
-              strong Contáctanos 
-                br
-              small Teléfono: 783-104-6697 
-                br
-              small email: sercyn_web@sercyn.com
-                br
-              small
-                a(href="/privacy") Política de Privacidad
+            small email: admin@sercyn.com
+              br
+            small
+              a(href="/privacy") Política de Privacidad
 
 
     //- script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js', integrity='sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n', crossorigin='anonymous')
