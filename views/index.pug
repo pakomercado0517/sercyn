@@ -31,7 +31,7 @@ block content
       //-     span.carousel-control-next-icon(aria-hidden='true')
       //-     span.sr-only Next
   .row.justify-content-center.wow.slideInUp
-    .col-sm-12.col-md-6.mt-5.wow.zoomIn
+    .col-xs-8.col-sm-10.col-md-10.col-lg-10.mt-5.wow.zoomIn
       a(href='/')
         h1.display-5.text-white.text-center.head-content Náutica SerCyn
     .col-sm-12.col-md-10.col-lg-10.mt-5.wow.zoomIn.text-center
@@ -42,7 +42,7 @@ block content
         |  , además, contamos con la 
         strong certificación de seguridad
         |  en la que nuestros clientes, no solo llevan la satisfacción de un viaje placentero, sino, desde el momento que estrechamos la mano, cuentan con la seguridad necesaria para cualquier tipo de insidente.   
-    .col-sm-12.col-md-5.col-lg-5.mt-4
+    .col-sm-10.col-md-5.col-lg-5.mt-4
       .carousel-inner(role='listbox')
         .carousel-item.active
           iframe.facevideo(src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fsercyn13%2Fvideos%2F1907027426210525%2F&show_text=0&width=560", width='560', height='315', style='border:none;overflow:hidden', scrolling="no", frameborder="0", allowTransparency="true", allowFullScreen="true")
@@ -77,16 +77,14 @@ block content
       h1.display-5.text-center ¡No te arrepentiras! 
         br
         small Somos el puerto más cercano a la Ciudad de México.
-    .col-sm-12.col-md-12.col-lg-12.mt-5
-      ul.nav.nav-tabs.facevideo.justify-content-center#nav-service
-        li.nav-item.wow.fadeInDown
-          a.nav-link#comment(href='/comment') Reservaciones
-        li.nav-item.wow.slideInLeft
-          a.nav-link(href='/rio') Río tuxpan
-        li.nav-item.wow.slideInUp
-          a.nav-link(href='/arrecife') Arrecífes
-        li.nav-item.wow.slideInRight
-          a.nav-link(href='/lobos') Isla Lobos
+    .col-sm-12.col-md-3.col-lg-3.mt-2
+          a.nav-link.btn.btn-primary.wow.slideInUp(href='/comment') Reservaciones
+    .col-sm-12.col-md-3.col-lg-3.mt-2
+      a.nav-link.btn.btn-primary.wow.slideInRight(href='/rio') Río Tuxpan
+    .col-sm-12.col-md-3.col-lg-3.mt-2
+      a.nav-link.btn.btn-primary.wow.slideInRight(href='/arrecife') Arrecífes
+    .col-sm-12.col-md-3.col-lg-3.mt-2
+      a.nav-link.btn.btn-primary.wow.slideInLeft(href='/lobos') Isla Lobos
     //- facebook comments
     .col-sm-12.col-md-8.col-lg-10
       .fb-login-button(data-max-rows='1', data-size='large', data -button-type='continue_with', data-show-faces='false', data-auto-logout-link='true', data-use-continue-as='true')

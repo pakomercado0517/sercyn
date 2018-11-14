@@ -12,6 +12,7 @@ const flash = require('connect-flash')
 const morgan = require('morgan')
 const session = require('express-session')
 const { url } = require('./config/database')
+const compression = require('compression')
 var app = express();
 
 require('./config/passport')(passport)
@@ -27,6 +28,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 // uncomment after placing your favicon in /public
+app.use(compression());
 app.use(favicon(path.join(__dirname, 'public', '/images/favicon/favicon.ico')));
 app.use(morgan('dev'))
 app.use(logger('dev'));

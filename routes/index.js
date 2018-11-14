@@ -9,23 +9,23 @@ const request= require('request')
 const swal= require('sweetalert2')
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Sercyn-Ecoturismo,Pesca deportiva y Servicios Turísticos-' });
+router.get('/',async function(req, res, next) {
+  await res.render('index', { title: 'Sercyn-Ecoturismo,Pesca deportiva y Servicios Turísticos-' });
 });
-router.get('/rio', function(req,res, next) {
-  res.render( 'rio', { title: 'Rio Tuxpan-Ecoturismo,Pesca deportiva y Servicios Turísticos-' })
+router.get('/rio', async function(req,res, next) {
+  await res.render('rio', { title: 'Rio Tuxpan-Ecoturismo,Pesca deportiva y Servicios Turísticos-' })
 })
-router.get('/arrecife', function(req,res,next) {
-	res.render('arrecife', {title: 'Arrecífes-Ecoturismo,Pesca deportiva y Servicios Turísticos-'})
+router.get('/arrecife', async function(req,res,next) {
+	await res.render('arrecife', {title: 'Arrecífes-Ecoturismo,Pesca deportiva y Servicios Turísticos-'})
 })
-router.get('/lobos', function(req, res, next) {
-	res.render('lobos', {title:'Isla de Lobos-Ecoturismo,Pesca deportiva y Servicios Turísticos-'})
+router.get('/lobos',async function(req, res, next) {
+	await res.render('lobos', {title:'Isla de Lobos-Ecoturismo,Pesca deportiva y Servicios Turísticos-'})
 })
-router.get('/comment', function(req,res, next) {
-	res.render('comment', {title:'Contacto-Ecoturismo,Pesca deportiva y Servicios Turísticos-'})
+router.get('/comment', async function(req,res, next) {
+	await res.render('comment', {title:'Contacto-Ecoturismo,Pesca deportiva y Servicios Turísticos-'})
 })
-router.get('/reservar', function(req, res, next) {
-	res.render('reservacion', {title: 'Reservacion-Ecoturismo, Pesca deportiva y Servicios Turísticos'})
+router.get('/reservar', async function(req, res, next) {
+	await res.render('reservacion', {title: 'Reservacion-Ecoturismo, Pesca deportiva y Servicios Turísticos'})
 })
 
 router.post('/mailing', (req,res, next) => {
