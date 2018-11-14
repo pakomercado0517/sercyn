@@ -5,7 +5,7 @@ block content_comment
     .col-sm-10.col-md-10.col-lg-9
       #cont_0a9e71ce7839cdacc0acf13367b7c624.clima
         script(type='text/javascript', async='', src='https://www.meteored.mx/wid_loader/0a9e71ce7839cdacc0acf13367b7c624')
-    .col-sm-12.col-md-8.col-lg-8.mt-4.wow.slideInRight
+    .col-sm-6.col-md-6.col-lg-12
       form(action='/mailing', method='POST')#form-contact.form-contact
         .form-group
           //- | {{$data}}
@@ -48,9 +48,7 @@ block content_comment
                 option#10 12
                 option#10 13
                 option#10 14            
-            br
-            br
-            h1#costo.help-block.text-center.wow.infinite.pulse(v-show="sercyn.place != ''") Hola {{ sercyn.name }}
+            h1#costo.form-control.help-block.text-center.wow.infinite.pulse(v-show="sercyn.place != ''") Hola {{ sercyn.name }}
             h1#costo.help-block.text-center.wow.infinite.pulse(v-show="sercyn.place != ''") {{ costoDelViaje }}
             br
           .form-group

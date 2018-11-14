@@ -50,46 +50,45 @@ html(lang='en')
       // menu de navegación
       .row
         .col-sm-12.col-md-12.col-lg-12
-          nav.navbar.navbar-toggleable-md.navbar-inverse.bg-inverse
-            button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarNavDropdown', aria-controls='navbarNavDropdown', aria-expanded='false', aria-label='Toggle navigation')
+          nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+            a.navbar-brand(href='/') Náutica SerCyn
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
               span.navbar-toggler-icon
-            a.navbar-brand.wow.zoomInLeft(href='/') Náutica SerCyn
-            #navbarNavDropdown.collapse.navbar-collapse
-              ul.navbar-nav
+            #navbarSupportedContent.collapse.navbar-collapse
+              ul.navbar-nav.mr-auto
                 li.nav-item.active
-                  a.nav-link.wow.zoomInLeft(href='/')
+                  a.nav-link(href='/')
                     | Inicio 
-                    //- span.sr-only (current)
+                    span.sr-only (current)
                 li.nav-item
-                  a.nav-link.wow.zoomInLeft(href='#') Acerca de Nosotros
-                li.nav-item
-                  a.nav-link.wow.zoomInLeft(href='/comment') Contacto
+                  a.nav-link(href='/comment') Comentarios/Reservaciones
                 li.nav-item.dropdown
-                  a#navbarDropdownMenuLink.nav-link.dropdown-toggle.wow.zoomInLeft(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-                    | Servicios
-                  .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+                  a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                    | Servicios y Destinos
+                  .dropdown-menu(aria-labelledby='navbarDropdown')
                     a.dropdown-item(href='/rio') Río Tuxpan
-                    a.dropdown-item(href='/arrecife') Arrecifes
+                    a.dropdown-item(href='/arrecife') Sistema Arrecifal
                     a.dropdown-item(href='/lobos') Isla de Lobos
+                    .dropdown-divider
+                    a.dropdown-item(href='/comment') Reservaciones
                 li.nav-item
-                  a#f_book.nav-link.wow.zoomInLeft(href='https://www.facebook.com/sercyn13', target='_blank') 
-                    i.fa.fa-facebook-official(style='font-size:28px; color:white') 
+                  a.nav-link.disabled(href='#') Acerca de Nosotros
         // /menu de navegación
-        block  content
-        block content2
-        block content3
-        block content4
-        block content_comment
-        block content_reservar
-        block content_shopping
-        block contentPrivacy
-        block acceso
-        block login
-        block adminService
-        block signup
-        block serviceFormUpdate
-        block serviceForm
-        block service  
+      block  content
+      block content2
+      block content3
+      block content4
+      block content_comment
+      block content_reservar
+      block content_shopping
+      block contentPrivacy
+      block acceso
+      block login
+      block adminService
+      block signup
+      block serviceFormUpdate
+      block serviceForm
+      block service  
 
       footer.footer
         .row.justify-content-around
