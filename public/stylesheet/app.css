@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Architects+Daughter|Bungee+Inline|Yellowtail|Shrikhand|Poppins|Roboto+Condensed');
 
 
+body {
+	-webkit-font-family: 'Roboto Condensed', sans-serif !important;
+	-moz-font-family: 'Roboto Condensed', sans-serif !important;
+	font-family: 'Roboto Condensed', sans-serif !important;
+	color: white !important;
+}
 
-.container-fluid  {
+/*.container-fluid  {*/
 	/*max-width: 100% !important;
 	overflow: hidden !important;
 	background-color: rgba(0,25,200,0.6);
@@ -25,10 +31,10 @@
 	-webkit-background-attachment: fixed !important;
 	-moz-background-attachment: fixed !important;
 	background-attachment: fixed !important;*/
-	-webkit-font-family: 'Roboto Condensed', sans-serif !important;
+/*	-webkit-font-family: 'Roboto Condensed', sans-serif !important;
 	-moz-font-family: 'Roboto Condensed', sans-serif !important;
 	font-family: 'Roboto Condensed', sans-serif !important;
-	color: white !important;
+	color: white !important;*/
 	/*background-blend-mode: multiply;*/
 	/*-webkit-max-width: 100% !important;
 	-moz-max-width: 100% !important;
@@ -39,7 +45,7 @@
 	-webkit-min-height: 600px;
 	-mozmin-height: 600px;
 	min-height: 600px;*/
-}
+/*}*/
 
 #nav-service a {
 	text-decoration: none !important;
@@ -178,38 +184,3 @@ background: linear-gradient(#69A6FA, #1E1E1E 20%) !important;
 	background: rgba(255,255,255,0.6)!important;
 }
 /*pantallas chicas*/
-@media only screen and (max-width: 780px) {
-	.container-fluid {
-		background-color: #2478E1;
-	}	
-
-	.carousel-item {
-		max-height: 0.5rem;
-	}
-	.footer {
-		display: flex;
-		align-items: center;
-		justify-content: center;	
-		position: relative;
-	}
-	#costo {
-		margin-left: 0;
-	}
-
-/*	.logo-footer {
-		max-width: 50%;
-		max-height: 60%;
-	}*/
-	.foot-text {
-		padding:0;
-		max-width: 25%;
-	}
-	footer {
-		display:none;
-	}
-}
-@media (min-width: 576px) {
-	footer {
-		display:none;
-	}
-}
