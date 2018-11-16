@@ -10,7 +10,6 @@ body {
 	background-attachment: fixed !important;
 	background-repeat: no-repeat !important;
 	background-position: center center !important;
-	background-blend-mode: multiply;
 }
 
 .container-fluid {
