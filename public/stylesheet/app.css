@@ -5,7 +5,16 @@ body {
 	-webkit-font-family: 'Roboto Condensed', sans-serif !important;
 	-moz-font-family: 'Roboto Condensed', sans-serif !important;
 	font-family: 'Roboto Condensed', sans-serif !important;
-	color: white !important;
+	color: #ffff !important;
+	background-size: 100% auto !important;
+	background-attachment: fixed !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	background-blend-mode: multiply;
+}
+
+.container-fluid {
+	max-width: 100%;
 }
 
 /*.container-fluid  {*/
