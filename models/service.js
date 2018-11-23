@@ -5,8 +5,8 @@ const serviceSchema = new Schema({
   name: {type: String},
   lastName: {type: String},
   date: {type: Date},
-  persons: {type:Number}
-  
+  persons: {type:Number},
+  observations: {type: String}
 })
 
 let Service= mongoose.model('Services', serviceSchema)

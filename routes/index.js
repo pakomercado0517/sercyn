@@ -16,16 +16,16 @@ router.get('/rio', async function(req,res, next) {
   await res.render('rio', { title: 'Rio Tuxpan-Ecoturismo,Pesca deportiva y Servicios Turísticos-' })
 })
 router.get('/arrecife', async function(req,res,next) {
-	await res.render('arrecife', {title: 'Arrecífes-Ecoturismo,Pesca deportiva y Servicios Turísticos-'})
+  await res.render('arrecife', {title: 'Arrecífes-Ecoturismo,Pesca deportiva y Servicios Turísticos-'})
 })
 router.get('/lobos',async function(req, res, next) {
-	await res.render('lobos', {title:'Isla de Lobos-Ecoturismo,Pesca deportiva y Servicios Turísticos-'})
+  await res.render('lobos', {title:'Isla de Lobos-Ecoturismo,Pesca deportiva y Servicios Turísticos-'})
 })
 router.get('/comment', async function(req,res, next) {
-	await res.render('comment', {title:'Contacto-Ecoturismo,Pesca deportiva y Servicios Turísticos-'})
+  await res.render('comment', {title:'Contacto-Ecoturismo,Pesca deportiva y Servicios Turísticos-'})
 })
 router.get('/reservar', async function(req, res, next) {
-	await res.render('reservacion', {title: 'Reservacion-Ecoturismo, Pesca deportiva y Servicios Turísticos'})
+  await res.render('reservacion', {title: 'Reservacion-Ecoturismo, Pesca deportiva y Servicios Turísticos'})
 })
 
 router.post('/mailing', (req,res, next) => {
@@ -47,10 +47,10 @@ router.post('/mailing', (req,res, next) => {
   next()
 }, (sendMailer) )
 router.get('/shopping', function (req,res, next) {
-	res.render('compra', {title: 'Reservacion-Ecoturismo, Pesca deportiva y Servicios Turísticos'})
+  res.render('compra', {title: 'Reservacion-Ecoturismo, Pesca deportiva y Servicios Turísticos'})
 })
 router.get('/privacy', function(req, res) {
-	res.render('privacy')
+  res.render('privacy')
 })
 
 // login and signup

@@ -5,15 +5,11 @@ body {
 	-webkit-font-family: 'Roboto Condensed', sans-serif !important;
 	-moz-font-family: 'Roboto Condensed', sans-serif !important;
 	font-family: 'Roboto Condensed', sans-serif !important;
-	color: #ffff !important;
-	background-size: 100% auto !important;
-	background-attachment: fixed !important;
-	background-repeat: no-repeat !important;
-	background-position: center center !important;
-}
-
-.container-fluid {
-	max-width: 100%;
+	color: #ffff;
+	background-size: 100% auto;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 /*.container-fluid  {*/
@@ -105,6 +101,9 @@ background: linear-gradient(#69A6FA, #1E1E1E 20%) !important;
 #submenu {
 	background-color: #186980 !important;
 	border: 0 !important;
+}
+.service_form {
+	background-color: rgba(0,0,0,0.4);
 }
 .content-page {
 	background: black !important;

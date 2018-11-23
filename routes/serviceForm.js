@@ -4,6 +4,8 @@ let router= express.Router()
 let {url} = require('../config/database')
 let Service= require('../models/service')
 
+// Servicio Normal
+
 router.post('/service/operar', (req,res, next) => {
   console.log(req.body)
 
@@ -12,7 +14,8 @@ router.post('/service/operar', (req,res, next) => {
       name: req.body.name,
       lastName: req.body.lastName,
       persons: req.body.persons,
-      date: req.body.date
+      date: req.body.date,
+      observations: req.body.observations,
     })
     ser.save()
   }else {
@@ -31,7 +34,8 @@ router.post('/update/service/operar', (req,res, next) => {
       name: req.body.name,
       lastName: req.body.lastName,
       persons: req.body.persons,
-      date: req.body.date
+      date: req.body.date,
+      observations: req.body.observations,
     })
     ser.save()
   }else {

@@ -2,7 +2,7 @@ extends layout
 
 block serviceForm
   .container-fluid
-    .row
+    .row.service_form
       .col-sm-12.mt-8.mx-auto
         form(action='/serviceForm/service/operar', method='POST')
           input(type='hidden', name='_id', value=_id)
@@ -18,5 +18,8 @@ block serviceForm
           .form-group
             label(for='date')
             input.form-control(type='date', id='date', name='date', required pattern='[0-9]{4}-[0-9]{2}-[0-9]{2}', value=date)
+          .form-group
+            label(for='observations') Observaciones
+            textarea.form-control#observations(rows='3',name='observations')
           button.btn.btn-primary(type='submit') Aceptar
           a.btn.btn-danger(href='/service') Cancelar
