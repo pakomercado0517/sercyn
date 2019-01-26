@@ -10,19 +10,34 @@ const swal= require('sweetalert2')
 
 /* GET home page. */
 router.get('/',async function(req, res, next) {
-  await res.render('index', { title: 'Sercyn-Ecoturismo,Pesca deportiva y Servicios Turísticos-' });
+  await res.render('index', {
+    title: 'Sercyn-Ecoturismo,Pesca deportiva y Servicios Turísticos-',
+    background_slide: '/stylesheet/home_background/background-slide.css'
+  });
 });
 router.get('/rio', async function(req,res, next) {
-  await res.render('rio', { title: 'Rio Tuxpan-Ecoturismo,Pesca deportiva y Servicios Turísticos-' })
+  await res.render('rio', { 
+    title: 'Rio Tuxpan-Ecoturismo,Pesca deportiva y Servicios Turísticos-',
+    background_slide: '/stylesheet/rio_background/background-slide.css'
+  })
 })
 router.get('/arrecife', async function(req,res,next) {
-  await res.render('arrecife', {title: 'Arrecífes-Ecoturismo,Pesca deportiva y Servicios Turísticos-'})
+  await res.render('arrecife', {
+    title: 'Arrecífes-Ecoturismo,Pesca deportiva y Servicios Turísticos-',
+    background_slide: '/stylesheet/arrecife_background/background-slide.css'
+  })
 })
 router.get('/lobos',async function(req, res, next) {
-  await res.render('lobos', {title:'Isla de Lobos-Ecoturismo,Pesca deportiva y Servicios Turísticos-'})
+  await res.render('lobos', {
+    title:'Isla de Lobos-Ecoturismo,Pesca deportiva y Servicios Turísticos-',
+    background_slide: '/stylesheet/isla_background/background-slide.css'
+  })
 })
 router.get('/comment', async function(req,res, next) {
-  await res.render('comment', {title:'Contacto-Ecoturismo,Pesca deportiva y Servicios Turísticos-'})
+  await res.render('comment', {
+    title:'Contacto-Ecoturismo,Pesca deportiva y Servicios Turísticos-',
+    background_slide: '/stylesheet/home_background/background-slide.css'
+  })
 })
 router.get('/reservar', async function(req, res, next) {
   await res.render('reservacion', {title: 'Reservacion-Ecoturismo, Pesca deportiva y Servicios Turísticos'})
@@ -50,17 +65,22 @@ router.get('/shopping', function (req,res, next) {
   res.render('compra', {title: 'Reservacion-Ecoturismo, Pesca deportiva y Servicios Turísticos'})
 })
 router.get('/privacy', function(req, res) {
-  res.render('privacy')
+  res.render('privacy', {
+    background_slide: '/stylesheet/home_background/background-slide.css'
+  })
 })
 
 // login and signup
 
 router.get('/acceso', (req, res) => {
-  res.render('acceso')
+  res.render('acceso', {
+    background_slide: '/stylesheet/home_background/background-slide.css'
+  })
 })
 router.get('/login', (req,res) => {
   res.render('login', {
-    message: req.flash('loginMesage')
+    message: req.flash('loginMesage'),
+    background_slide: '/stylesheet/home_background/background-slide.css'
   })
 })
 router.post('/login', passport.authenticate('local-login', {
@@ -71,7 +91,8 @@ router.post('/login', passport.authenticate('local-login', {
 
 router.get('/signup', (req,res) => {
   res.render('signup', {
-    message: req.flash('signupMessage')
+    message: req.flash('signupMessage'),
+    background_slide: '/stylesheet/home_background/background-slide.css'
   })
 })
 router.post('/signup', passport.authenticate('local-signup', {
@@ -82,7 +103,9 @@ router.post('/signup', passport.authenticate('local-signup', {
 
 router.get('/logout', (req,res) => {
   req.logout()
-  res.redirect('/acceso')
+  res.redirect('/acceso', {
+    background_slide: '/stylesheet/home_background/background-slide.css'
+  })
 })
 
 function isLoggedIn(req, res, next) {
@@ -96,31 +119,44 @@ function isLoggedIn(req, res, next) {
 
 
 router.get('/conanp', (req, res, next) => {
-  res.redirect('/service')
+  res.redirect('/service', {
+    background_slide: '/stylesheet/home_background/background-slide.css'
+  })
 })
 
 router.get('/admin', isLoggedIn, (req,res,next) => {
   Service.find((err,services) =>{
     if(err) throw err
-    res.render('adminService', {services: services})
+    res.render('adminService', {
+      services: services,
+      background_slide: '/stylesheet/home_background/background-slide.css'
+    })
   })
 })
 
 router.get('/service', isLoggedIn, (req, res, next) => {
   Service.find((err, services) => {
     if (err) throw err
-    res.render('service', {services:services})
+    res.render('service', {
+      services:services,
+      background_slide: '/stylesheet/home_background/background-slide.css'
+    })
   })
   })
 router.get('/service/nuevo', isLoggedIn, (req,res,next) => {
-  res.render('serviceForm')
+  res.render('serviceForm', {
+    background_slide: '/stylesheet/home_background/background-slide.css'
+  })
 })
 
 router.get('/service/modificar/:id', isLoggedIn, (req, res, next) => {
   let idService= req.params.id
   Service.findOne({_id: idService}, (err, service) => {
     if (err) throw err
-    res.render('serviceFormUpdate', {service: service})
+    res.render('serviceFormUpdate', {
+      service: service,
+      background_slide: '/stylesheet/home_background/background-slide.css'
+    })
   })
 })
 
@@ -128,7 +164,9 @@ router.get('/service/eliminar/:id', isLoggedIn, (req, res, next) => {
   let idService= req.params.id
   Service.remove({_id: idService}, (err) => {
     if(err) throw err
-    res.redirect('/admin')
+    res.redirect('/admin', {
+      background_slide: '/stylesheet/home_background/background-slide.css'
+    })
   })
 })
 

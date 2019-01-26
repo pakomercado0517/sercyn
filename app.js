@@ -13,7 +13,7 @@ const morgan = require('morgan')
 const session = require('express-session')
 const { url } = require('./config/database')
 const compression = require('compression')
-var app = express();
+var app = express()
 
 require('./config/passport')(passport)
 
