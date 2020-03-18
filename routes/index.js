@@ -15,6 +15,9 @@ router.get('/',async function(req,res) {
     background_slide: '/stylesheet/home_background/background-slide.css'
   });
 });
+router.get('/covid19', async function(req,res) {
+  await res.render('covid_19')
+})
 router.get('/rio', async function(req,res) {
   await res.render('rio', { 
     title: 'Rio Tuxpan-Ecoturismo,Pesca deportiva y Servicios Turísticos-',

@@ -1,0 +1,257 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Covid19-Map
+    style.
+      body {
+      margin:0;
+      }
+      .map {
+      width: 100vw;
+      height: 100vh;
+      }
+  body
+    #map.map
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyA6mcue6vFqyU4BwUikL258CReQevfw9GQ&callback=initMap')
+    script.
+      const $map= document.querySelector('#map');
+      const map= new window.google.maps.Map($map, {
+      center:{
+      lat:20.9511664,
+      lng:-97.3987628,
+      },
+      zoom: 4,
+      styles: [
+      {
+      "featureType": "all",
+      "elementType": "labels.text.fill",
+      "stylers": [
+      {
+      "saturation": 36
+      },
+      {
+      "color": "#000000"
+      },
+      {
+      "lightness": 40
+      }
+      ]
+      },
+      {
+      "featureType": "all",
+      "elementType": "labels.text.stroke",
+      "stylers": [
+      {
+      "visibility": "on"
+      },
+      {
+      "color": "#000000"
+      },
+      {
+      "lightness": 16
+      }
+      ]
+      },
+      {
+      "featureType": "all",
+      "elementType": "labels.icon",
+      "stylers": [
+      {
+      "visibility": "off"
+      }
+      ]
+      },
+      {
+      "featureType": "administrative",
+      "elementType": "geometry.fill",
+      "stylers": [
+      {
+      "color": "#000000"
+      },
+      {
+      "lightness": 20
+      }
+      ]
+      },
+      {
+      "featureType": "administrative",
+      "elementType": "geometry.stroke",
+      "stylers": [
+      {
+      "color": "#000000"
+      },
+      {
+      "lightness": 17
+      },
+      {
+      "weight": 1.2
+      }
+      ]
+      },
+      {
+      "featureType": "administrative.country",
+      "elementType": "labels",
+      "stylers": [
+      {
+      "visibility": "off"
+      }
+      ]
+      },
+      {
+      "featureType": "administrative.province",
+      "elementType": "labels",
+      "stylers": [
+      {
+      "visibility": "off"
+      }
+      ]
+      },
+      {
+      "featureType": "landscape",
+      "elementType": "geometry",
+      "stylers": [
+      {
+      "color": "#000000"
+      },
+      {
+      "lightness": 20
+      }
+      ]
+      },
+      {
+      "featureType": "poi",
+      "elementType": "geometry",
+      "stylers": [
+      {
+      "color": "#000000"
+      },
+      {
+      "lightness": 21
+      }
+      ]
+      },
+      {
+      "featureType": "road.highway",
+      "elementType": "geometry.fill",
+      "stylers": [
+      {
+      "color": "#000000"
+      },
+      {
+      "lightness": 17
+      }
+      ]
+      },
+      {
+      "featureType": "road.highway",
+      "elementType": "geometry.stroke",
+      "stylers": [
+      {
+      "color": "#000000"
+      },
+      {
+      "lightness": 29
+      },
+      {
+      "weight": 0.2
+      }
+      ]
+      },
+      {
+      "featureType": "road.arterial",
+      "elementType": "geometry",
+      "stylers": [
+      {
+      "color": "#000000"
+      },
+      {
+      "lightness": 18
+      }
+      ]
+      },
+      {
+      "featureType": "road.local",
+      "elementType": "geometry",
+      "stylers": [
+      {
+      "color": "#000000"
+      },
+      {
+      "lightness": 16
+      }
+      ]
+      },
+      {
+      "featureType": "transit",
+      "elementType": "geometry",
+      "stylers": [
+      {
+      "color": "#000000"
+      },
+      {
+      "lightness": 19
+      }
+      ]
+      },
+      {
+      "featureType": "water",
+      "elementType": "geometry",
+      "stylers": [
+      {
+      "color": "#000000"
+      },
+      {
+      "lightness": 17
+      }
+      ]
+      },
+      {
+      "featureType": "water",
+      "elementType": "labels",
+      "stylers": [
+      {
+      "visibility": "off"
+      }
+      ]
+      }
+      ]
+      })
+      renderData();
+      async function getData() {
+      const response= await fetch('https://wuhan-coronavirus-api.laeyoung.endpoint.ainize.ai/jhu-edu/latest')
+      const data= await response.json()
+      return data
+      }
+      const popup= new window.google.maps.InfoWindow()
+      function renderExtraData({confirmed, deaths, recovered, provincestate, countryregion}) {
+      return `
+      <div>
+      <p> <strong> ${provincestate} - ${countryregion} </strong></p>
+      <p> Confirmados: ${confirmed} </p>
+      <p> Recuperados: ${recovered} </p>
+      <p> Muertes: ${deaths} </p>
+      </div>
+      `
+      }
+      async function renderData(){
+      const data= await getData()
+      console.log(data)
+      data.forEach(item => {
+      if(item.confirmed > 0) {
+      const marker= new window.google.maps.Marker({
+      position: {
+      lat: item.location.lat,
+      lng: item.location.lng,
+      },
+      map,
+      icon:'/images/umbrellacorp.png'
+      })
+      marker.addListener('click', ()=> {
+      popup.setContent(renderExtraData (item))
+      popup.open(map, marker)
+      })
+      }
+      })
+      }
