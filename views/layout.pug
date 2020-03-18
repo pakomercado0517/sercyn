@@ -29,6 +29,7 @@ html(lang='en')
     link(href='https://fonts.googleapis.com/css?family=Pacifico', rel='stylesheet')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
   body
+    .raiz
     #fb-root
     script.
      (function(d, s, id) {
@@ -66,9 +67,9 @@ html(lang='en')
           h3 Asombrate
     .container-fluid
       .row.text-center
-        .col.col-xs-12.col-sm-12.col-md-4
-          img.logo-image.img.wow.flipInX(src='/images/logo-sercyn.png', width="100", height="150" alt='logo, responsive image')
-        #titulo.col.col-xs-12.col-md-8.hidden-sm-down.wow.slideInRight
+        .col-xs-12.col-sm-12.col-md-4
+          img.logo-image.img.wow.flipInX(src='/images/logo_sercyn_final.png', width="100", height="150" alt='logo, responsive image')
+        #titulo.col-xs-12.col-md-8.hidden-sm-down.wow.slideInRight
           p.text-white.n Náutica
           h1.text-white SerCyn
           p.text-white Tour Service, Ecoturismo y Pesca Deportiva 
@@ -153,7 +154,7 @@ html(lang='en')
     script(src="https://unpkg.com/sweetalert/dist/sweetalert.min.js")
     script(src='/javascript/app.js')
     script(src='/javascript/wow.js')
-
+    script(src='./dist/js/bundle.js')
     script.
       new WOW().init()
 

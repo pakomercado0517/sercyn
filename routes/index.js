@@ -6,48 +6,49 @@ const mongoose= require('mongoose')
 let User= require('../models/user')
 let passport= require('passport')
 const request= require('request')
-const swal= require('sweetalert2')
+const Swal= require('sweetalert2')
 
 /* GET home page. */
-router.get('/',async function(req, res, next) {
+router.get('/',async function(req,res) {
   await res.render('index', {
     title: 'Sercyn-Ecoturismo,Pesca deportiva y Servicios Turísticos-',
     background_slide: '/stylesheet/home_background/background-slide.css'
   });
 });
-router.get('/rio', async function(req,res, next) {
+router.get('/rio', async function(req,res) {
   await res.render('rio', { 
     title: 'Rio Tuxpan-Ecoturismo,Pesca deportiva y Servicios Turísticos-',
     background_slide: '/stylesheet/rio_background/background-slide.css'
   })
 })
-router.get('/arrecife', async function(req,res,next) {
+router.get('/arrecife', async function(req,res) {
   await res.render('arrecife', {
     title: 'Arrecífes-Ecoturismo,Pesca deportiva y Servicios Turísticos-',
     background_slide: '/stylesheet/arrecife_background/background-slide.css'
   })
 })
-router.get('/lobos',async function(req, res, next) {
+router.get('/lobos',async function(req, res) {
   await res.render('lobos', {
     title:'Isla de Lobos-Ecoturismo,Pesca deportiva y Servicios Turísticos-',
     background_slide: '/stylesheet/isla_background/background-slide.css'
   })
 })
-router.get('/comment', async function(req,res, next) {
+router.get('/comment', async function(req,res) {
   await res.render('comment', {
     title:'Contacto-Ecoturismo,Pesca deportiva y Servicios Turísticos-',
     background_slide: '/stylesheet/home_background/background-slide.css'
   })
 })
-router.get('/reservar', async function(req, res, next) {
+router.get('/reservar', async function(req,res) {
   await res.render('reservacion', {title: 'Reservacion-Ecoturismo, Pesca deportiva y Servicios Turísticos'})
 })
 
-router.post('/mailing', (req,res, next) => {
+router.post('/mailing', (res,req,next) => {
   if(req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response']=== '' || req.body['g-recaptcha-response'] === null) {
-    console.log('Por favor, verifica el captcha')
-    return next('/comment')
-  } 
+    res.json({"respondeCode": 1, "responseDesc": "Por favor, responde al captcha"})
+    Swal.fire('Error', 'Por favor verifica el captcha', 'error')
+  }
+  
   const secretKey= '6LdstnkUAAAAABQjQu64PPlcdW1KaKO2M7H_ymIW';
 
   let verifyUrl= `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${req.body["g-recaptcha-response"]}&remoteip=${req.connection.remoteAddress}`;
@@ -55,11 +56,14 @@ router.post('/mailing', (req,res, next) => {
   request(verifyUrl, function(error, response,body) {
     body=JSON.parse(body);
     if(body.success !== undefined && !body.success) {
-      console.log('Falló verificación de captcha')
-      return next('/comment')
-    } 
+      res.json({"responseCode": 1, "responseDesc": "Falló verificación de captcha"})
+      Swal.fire('Atención', 'Fallo la verificación del Captcha', 'error')
+    }
+    res.json({"responseCode": 0, "responseDesc": "Captcha verificado"})
+    Swal.fire('Muchas gracias!', 'Mensaje enviado con éxito', 'success') 
+    // return next('/mailing')
   })
-  next()
+  // next('/comment')
 }, (sendMailer) )
 router.get('/shopping', function (req,res, next) {
   res.render('compra', {title: 'Reservacion-Ecoturismo, Pesca deportiva y Servicios Turísticos'})

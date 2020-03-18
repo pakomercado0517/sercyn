@@ -73,9 +73,14 @@ Vue.config.devtools = true;
 
 
 $('.form-contact').submit(function() {
-    swal('Muchas Gracias!', 'Tu mensaje ha sido enviado', 'success')
-  .fail(function(){
-    swal('Lo sentimos!','Hubo un error en el envío', 'error')
-  })
+    $(this).ajaxSubmit({
+      error: function(xhr){
+        status('Error ' + xhr.status)
+      },
+      success: function(response) {
+        console.log('Mensaje enviado con exito!')
+      }
+    })
+    return false
 })
 

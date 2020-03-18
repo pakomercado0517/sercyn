@@ -3,9 +3,14 @@ extends layout
 block content_comment
   .row.justify-content-center
     .col-sm-10.col-md-10.col-lg-9
-      #cont_0a9e71ce7839cdacc0acf13367b7c624.clima
-        script(type='text/javascript', async='', src='https://www.meteored.mx/wid_loader/0a9e71ce7839cdacc0acf13367b7c624')
-    .col-sm-6.col-md-6.col-lg-12
+      script(type='text/javascript', src='https://es.windfinder.com/widget/forecast/js/tuxpan?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kmh&days=4&show_day=1&show_pressure=0&show_clouds=0&show_rain=0')
+        noscript
+      a(rel='nofollow', href='https://www.windfinder.com/forecast/tuxpan?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-forecast') Wind forecast for undefined
+      |  provided by 
+      a(rel='nofollow', href='https://www.windfinder.com?utm_source=forecast&utm_medium=web&utm_campaign=homepageweather&utm_content=noscript-logo') windfinder.com
+    .col-sm-10.col-md-10.col-lg-9
+      br
+      h1.text-center Reservaciones
       form(action='/mailing', method='POST')#form-contact.form-contact
         .form-group
           //- | {{$data}}
@@ -62,6 +67,7 @@ block content_comment
             br
             button.btn.btn-secondary.button-contact(type='submit') Enviar
             br 
+
 
   script(src='https://www.google.com/recaptcha/api.js?hl=es', async defer)
     //- h2 Por Favor, llena el formulario.

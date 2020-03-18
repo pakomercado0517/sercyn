@@ -25,7 +25,7 @@ function sendMailer(req, res, next) {
     subject: `Saludos ${req.body.name}!` ,
     html: `
     <div align= "center">
-      <h1>Hola ${req.body.name}: Muchas gracias por comunicarte con nosotros, haremos contacto contigo lo mas breve posible.</h1>
+      <h1>Hola ${req.body.name}, muchas gracias por comunicarte con nosotros. Haremos contacto contigo lo mas breve posible.</h1>
       <br/>
       <h3>El servicio que solicitas incluye:</h3><br/><br/>
           Nevera</br>

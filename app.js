@@ -19,9 +19,9 @@ require('./config/passport')(passport)
 
 // Iniciar base de datos mongodb
 
-mongoose.connect(url, {
-  useMongoClient : true
-})
+// mongoose.connect(url, {
+//   useMongoClient : true
+// })
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
